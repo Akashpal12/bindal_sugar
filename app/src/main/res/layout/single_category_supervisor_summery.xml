@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="0sp"
+    app:cardUseCompatPadding="false"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_text_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="center_vertical"
+        android:background="#DFDFDF"
+        android:paddingBottom="0sp">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/ratoon"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/category"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/plant"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ratoon"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/autumn"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/plant"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/autumn"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/per"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/total"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/ratoon1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/per"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/plant1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ratoon1"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/autumn1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/plant1"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/total1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/autumn1"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/per1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/total1"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

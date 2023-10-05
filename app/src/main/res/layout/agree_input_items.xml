@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="50dp"
+            android:background="@color/Default">
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="50dp"
+                android:background="@color/Default"
+                android:gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/Default">
+
+            <TextView
+                android:id="@+id/vilageName"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="50dp"
+                android:background="@color/Default"
+                android:gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/Default">
+
+            <TextView
+                android:id="@+id/growerName"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="50dp"
+                android:background="@color/Default"
+                android:gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/Default">
+
+            <TextView
+                android:id="@+id/bleachingP"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="50dp"
+                android:background="@color/Default"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/Default">
+
+            <TextView
+                android:id="@+id/hexa"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="50dp"
+                android:background="@color/Default"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/Default">
+
+            <TextView
+                android:id="@+id/TrichoP"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="50dp"
+                android:background="@color/Default"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/Default">
+
+            <TextView
+                android:id="@+id/TrichoL"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="50dp"
+                android:background="@color/Default"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/Default">
+
+            <TextView
+                android:id="@+id/emida"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="50dp"
+                android:background="@color/Default"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/Default">
+
+            <TextView
+                android:id="@+id/corajen"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="50dp"
+                android:background="@color/Default"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/Default">
+
+            <TextView
+                android:id="@+id/ferrous"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="50dp"
+                android:background="@color/Default"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="0sp"
+    app:cardUseCompatPadding="false"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_text_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="center_vertical"
+        android:background="#DFDFDF"
+        android:paddingBottom="0sp">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/village_code"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/plot_sr_no"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/village_code"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/survey_id"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/plot_sr_no"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/area_hec"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/survey_id"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/total_share"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/area_hec"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/total_share"
+                android:src="@drawable/ic_baseline_edit_24" />
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

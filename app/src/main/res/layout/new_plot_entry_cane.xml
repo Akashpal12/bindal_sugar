@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".view.MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/old_plot_id"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:text="Old Plot Sr No" />
+
+                        <TextView
+                            android:id="@+id/old_plot_from"
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:text="Plot From"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_plot_sr_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_plot_sr_no"
+                            android:layout_width="match_parent"
+                            android:text="Plot Sr No"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:id="@+id/plot_sr_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/t_plot_sr_no"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint=""
+                            android:inputType="none"
+                            android:textColor="#000"
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_khashra_number"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_plot_sr_no"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_khashra_number"
+                            android:layout_width="match_parent"
+                            android:text="Khashra Number"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:id="@+id/khashra_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_khashra_number"
+                            android:hint=""
+                            android:textColorHint="#000"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_gata_number"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_khashra_number"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_gata_number"
+                            android:layout_width="match_parent"
+                            android:text="Gata Number"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:id="@+id/gata_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_gata_number"
+                            android:hint=""
+                            android:textColorHint="#000"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_village"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_gata_number"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_village"
+                            android:layout_width="match_parent"
+                            android:text="Village"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/village_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/t_village"
+                            android:hint=""
+                            android:inputType="number"
+                            android:textColor="#000"
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_village"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_master_coordinate"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/coordinate"
+                        android:visibility="gone"
+                        android:layout_below="@+id/recycler_view"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_master_latlng"
+                            android:layout_width="match_parent"
+                            android:text=""
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/t_master_acc"
+                            android:layout_width="match_parent"
+                            android:text=""
+                            android:paddingBottom="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="9dp"
+                            android:layout_below="@+id/t_master_latlng"
+                            android:layout_height="wrap_content" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rl_capture_coordinate"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_master_coordinate"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/capture_location"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.03"
+                            android:background="#8BC34A"
+                            android:clickable="true"
+                            android:onClick="captureCoordinate"
+                            android:text="Capture Location"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.03"
+                            android:background="#9C27B0"
+                            android:layout_margin="5dp"
+                            android:text="View On Map"
+                            android:clickable="true"
+                            android:onClick="mapViewPlot"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.03"
+                            android:background="#FF5722"
+                            android:layout_margin="5dp"
+                            android:text="Reset Location"
+                            android:clickable="true"
+                            android:onClick="clearCoordinate"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_area"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_capture_coordinate"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_area"
+                            android:layout_width="match_parent"
+                            android:text="Area"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:id="@+id/area_meter"
+                            android:layout_width="170dp"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:editable="false"
+                            android:layout_below="@+id/t_area"
+                            android:hint="Meter"
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+
+                        <EditText
+                            android:id="@+id/area_hec"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:editable="false"
+                            android:layout_below="@+id/t_area"
+                            android:layout_toRightOf="@+id/area_meter"
+                            android:hint="Hectare"
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_variety"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_area"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_variety"
+                            android:layout_width="match_parent"
+                            android:text="Variety"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/variety"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_variety"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_cane_type"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_variety"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_cane_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cane Type" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/cane_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_cane_type"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_mix_crop"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_cane_type"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_mix_crop"
+                            android:layout_width="match_parent"
+                            android:text="Mix Crop"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:id="@+id/mix_crop"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_mix_crop"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_insect"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_mix_crop"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_insect"
+                            android:layout_width="match_parent"
+                            android:text="Insect"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:id="@+id/insect"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_insect"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_seed_source"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_insect"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_seed_source"
+                            android:layout_width="match_parent"
+                            android:text="Seed Source"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/seed_source"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_seed_source"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_plant_method"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_seed_source"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_plant_method"
+                            android:layout_width="match_parent"
+                            android:text="Plant Method"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/plant_method"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_plant_method"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_crop_condition"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_plant_method"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_crop_condition"
+                            android:layout_width="match_parent"
+                            android:text="Crop Condition"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/crop_condition"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_crop_condition"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_disease"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_crop_condition"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_disease"
+                            android:layout_width="match_parent"
+                            android:text="Disease"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/disease"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_disease"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_irrigation"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_disease"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_irrigation"
+                            android:layout_width="match_parent"
+                            android:text="Irrigation"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/irrigation"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_irrigation"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_soil_type"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_irrigation"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_soil_type"
+                            android:layout_width="match_parent"
+                            android:text="Soil Type"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/soil_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_soil_type"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_land_type"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_soil_type"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_land_type"
+                            android:layout_width="match_parent"
+                            android:text="Land Type"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/land_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_land_type"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_border_crop"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_land_type"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_border_crop"
+                            android:layout_width="match_parent"
+                            android:text="Border Crop"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/border_crop"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_border_crop"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_plot_type"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_border_crop"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_plot_type"
+                            android:layout_width="match_parent"
+                            android:text="Plot Type"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/plot_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_plot_type"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_ghashti_number"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_plot_type"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_ghashti_number"
+                            android:layout_width="match_parent"
+                            android:text="Ghashti Number"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:id="@+id/ghashti_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="text"
+                            android:layout_below="@+id/t_ghashti_number"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_inter_crop"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_ghashti_number"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_inter_crop"
+                            android:layout_width="match_parent"
+                            android:text="Inter Crop"
+                            android:layout_height="wrap_content" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/inter_crop"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="number"
+                            android:layout_below="@+id/t_inter_crop"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_plant_date"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_below="@+id/rl_inter_crop"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/t_plant_date"
+                            android:layout_width="match_parent"
+                            android:text="Plant Date"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:id="@+id/plant_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textColor="#000"
+                            android:inputType="none"
+                            android:focusable="false"
+                            android:editable="false"
+                            android:layout_below="@+id/t_plant_date"
+                            android:hint=""
+                            android:textColorHint="#949494"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/rl_save"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_plant_date"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.04"
+                            android:background="#8BC34A"
+                            android:text="Save"
+                            android:layout_margin="10dp"
+                            android:clickable="true"
+                            android:onClick="saveData"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.04"
+                            android:background="#FF5722"
+                            android:layout_margin="10dp"
+                            android:text="Exit"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

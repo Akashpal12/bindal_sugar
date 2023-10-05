@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:theme="@style/AppTheme.ToolbarFont"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="5dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_village_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/t_village_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/canearea_bg"
+                            android:gravity="center_vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:text="Village Code"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_height="wrap_content" />
+
+                                <EditText
+                                    android:id="@+id/village_code"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/calibri"
+                                    android:gravity="left"
+                                    android:inputType="text"
+                                    android:padding="5dp"
+                                    android:text="@string/LBL_VILLAGE_CODE"
+                                    android:textColor="@color/colorAccent"
+                                    android:textColorHint="#000"
+                                    android:textIsSelectable="false"
+                                    android:textSize="15dp" />
+
+                            </LinearLayout>
+
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_grower_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_village_code">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/t_grower_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/canearea_bg"
+                            android:gravity="center_vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:text="Grower Code / Name "
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_height="wrap_content" />
+
+                                <EditText
+                                    android:id="@+id/grower_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/calibri"
+                                    android:gravity="left"
+                                    android:text="@string/LBL_GROWER_CODE"
+                                    android:layout_below="@+id/t_grower_name"
+                                    android:inputType="textCapWords"
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorAccent"
+                                    android:textColorHint="#000"
+                                    android:textIsSelectable="false"
+                                    android:textSize="15dp" />
+
+                            </LinearLayout>
+
+
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_plot_sr_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_aadhar_number">
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/t_plot_sr_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/canearea_bg"
+                            android:gravity="center_vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:text="Plot Serial No"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_height="wrap_content" />
+                                <EditText
+                                    android:id="@+id/plot_sr_no"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:fontFamily="@font/calibri"
+                                    android:gravity="left"
+                                    android:text="@string/MENU_PLOT_SR_NO"
+                                    android:layout_below="@+id/t_grower_name"
+                                    android:inputType="number"
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorAccent"
+                                    android:textColorHint="#000"
+                                    android:textIsSelectable="false"
+                                    android:textSize="15dp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_aadhar_number">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:padding="5dp"
+                            android:text="Observation" />
+
+                    </RelativeLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_top_5dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/canearea_bg"
+                        android:layout_below="@+id/rl_aadhar_number">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                           android:id="@+id/puc_recycler"
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/canearea_bg"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/rl_aadhar_number">
+
+                        <TextView
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Result" />
+
+                        <TextView
+                            android:id="@+id/result_txt"
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=":" />
+                        <TextView
+                            android:id="@+id/tvResult"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/rbYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_24sdp"
+                            android:backgroundTint="@color/colorAccent"
+                            android:text="Yes"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginStart="4dp"
+                            android:textSize="12sp"/>
+                        <RadioButton
+                            android:id="@+id/rbNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_24sdp"
+                            android:text="No"
+                            android:textColor="@color/colorAccent"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:layout_marginStart="8dp"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_activityno"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/canearea_bg"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/input_activity_no"
+                            android:layout_width="match_parent"
+                            android:hint="Activity Number"
+                            android:inputType="numberDecimal"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:fontFamily="@font/calibri"
+                            android:padding="5dp"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_date"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/input_layout_sprayno"
+                        android:background="@drawable/canearea_bg"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/input_inset_date"
+                            android:layout_width="match_parent"
+                            android:hint="Last Irrigation Date"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:focusable="false"
+                            android:fontFamily="@font/calibri"
+                            android:padding="5dp"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_description"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/input_layout_date"
+                        android:background="@drawable/canearea_bg"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/input_description"
+                            android:layout_width="match_parent"
+                            android:hint="Description"
+                            android:inputType="textCapWords"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:fontFamily="@font/calibri"
+                            android:padding="5dp"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_spray_layout"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/input_layout_spray"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content">
+
+
+                        <Button
+                            android:id="@+id/btnadd"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.03"
+                            android:background="#035E06"
+                            android:layout_alignParentRight="true"
+                            android:clickable="true"
+                            android:onClick="addActivity"
+                            android:text="Add Activity"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_spray_item_list_layout"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_spray_layout"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_image"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/recycler_view"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:onClick="openCam"
+                            android:src="@drawable/ic_baseline_camera_alt_24" />
+                    </RelativeLayout>
+
+                    <CheckBox
+                        android:id="@+id/send_sms"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:text="Would you like to send message to grower ? "
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/rl_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_share_per">
+
+                        <Button
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/background_light"
+                            android:background="#8bc34a"
+                            android:clickable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/MENU_SAVE"
+                            android:layout_weight="0.04"
+                            android:onClick="saveData"/>
+
+                        <Button
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/background_light"
+                            android:id="@+id/add_btn"
+                            android:background="#ff5722"
+                            android:clickable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/MENU_EXIT"
+                            android:layout_weight="0.04"
+                            android:onClick="ExitBtn"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

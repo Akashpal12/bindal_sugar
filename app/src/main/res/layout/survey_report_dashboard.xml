@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/form_bg"
+    tools:context=".view.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:theme="@style/AppTheme.ToolbarFont"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".view.MainActivity"
+        >
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+           android:background="@drawable/background_image_with_alpha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:alignContent="flex_start"
+                        app:alignItems="flex_start"
+                        app:flexWrap="wrap"
+                        app:justifyContent="flex_start">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:baselineAligned="false"
+                        android:id="@+id/line1"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:onClick="openServerDataStatus"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_plot_finder"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:src="@drawable/targetreport" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_plot_finder"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_CHECK_PENDING_SERVER"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:onClick="openAllDataStatus"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_variety"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:src="@drawable/variertywisereport" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_variety"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_ALL_SURVEY_DATA"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:onClick="caneTypeSummery"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_supervisor_with_variety_area"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:src="@drawable/todayvarietywisereport" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_supervisor_with_variety_area"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_CANETYPE_SUMMARY"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:onClick="plotWiseReport"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_survey_report"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:src="@drawable/survey" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_survey_report"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_GROWER_WISE_REPORT"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:onClick="checkListReport"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_seed_reservation_details"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/reservation" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_seed_reservation_details"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_CHECK_LIST_REPORT"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:onClick="openVarietyWiseSummary"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_seed_mapping_report"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:src="@drawable/report" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_seed_mapping_report"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_VARIETY_WISE_REPORT"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:weightSum="3"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:onClick="openStaffSurveyReportMap"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_seed_indent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:src="@drawable/mapping" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_seed_indent"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_MAP_VIEW_REPORT"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/crop_observation"
+                            android:layout_width="0dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="left|top"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:onClick="openCropObservation"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="5dp"
+
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:src="@drawable/crop" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_CROP_OBSERVATION_VIEW"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:onClick="openCropObservationReport"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_seed_indent_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/ic_baseline_date_range_24" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_seed_indent_3"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_CANE_OBSERVATION_REPORT"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:clickable="true"
+                                android:onClick="openSurveyImportData"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_seed_indent4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/ic_baseline_report_24" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_seed_indent4"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="Type Of Planting Report"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+                    <!--<LinearLayout
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:background="@color/dark_green"
+                            android:gravity="left"
+                            android:clickable="true"
+                            android:onClick="openServerDataStatus"
+                             >
+
+                            <ImageView
+                                android:id="@+id/img_download_import1"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/download_import1"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_download_import1"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:text="Check Pending Server Data"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line1"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:background="@color/darkYellow"
+                            android:gravity="left"
+                            android:clickable="true"
+                            android:onClick="openAllDataStatus"
+                             >
+
+                            <ImageView
+                                android:id="@+id/img_download_import11"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/download_import11"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_download_import11"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:text="All Survey Data"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line2"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:background="@color/light_blue"
+                            android:gravity="left"
+                            android:clickable="true"
+                            android:onClick="caneTypeSummery"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_download_import"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/download_import"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_download_import"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size"
+                                android:text="Cane Type Summery" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line3"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:background="@color/pink"
+                            android:gravity="left"
+                            android:clickable="true"
+                            android:onClick="plotWiseReport"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_download_plot_wise_report"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/download_plot_wise_report"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_download_plot_wise_report"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:text="Grower Wise Report"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line4"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:background="@color/orange"
+                            android:gravity="left"
+                            android:clickable="true"
+                            android:onClick="checkListReport"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_download_check_list"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/download_check_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_download_check_list"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:text="Check List Report"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>-->
+
+                  <!--  <LinearLayout
+                        android:id="@+id/line6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line5"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:background="@color/yellow"
+                            android:gravity="left"
+                            android:clickable="true"
+                            android:onClick="openVarietyWiseSummary"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_variety_wise_summary"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/variety_wise_summary"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_variety_wise_summary"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size"
+                                android:text="@string/MENU_VARIETY_WISE_REPORT" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line6"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:background="@color/red"
+                            android:gravity="left"
+                            android:clickable="true"
+                            android:onClick="openStaffSurveyReportMap"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_map_view_report"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/map_view_report"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_map_view_report"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:text="@string/MENU_MAP_VIEW_REPORT_REPORT"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line7"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:background="@color/skyblue"
+                            android:gravity="left"
+                            android:clickable="true"
+                            android:onClick="openExportSurveyData"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_export_survey"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/map_export_survey"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_export_survey"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:text="@string/MENU_EXPORT_DATA"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line8"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:background="@color/bluee"
+                            android:gravity="left"
+                            android:clickable="true"
+                            android:onClick="openSurveyImportData"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_import_survey"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/map_import_survey"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_import_survey"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:text="@string/MENU_IMPORT_DATA"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line9"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/pink"
+                            android:clickable="true"
+                            android:gravity="left"
+                            android:onClick="openCropObservation"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/img_crop_observation"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/crop_observation"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_crop_observation"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:text="@string/MENU_CROP_OBSERVATION_VIEW"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line10"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:background="@color/colorAccent"
+                            android:gravity="left"
+                            android:clickable="true"
+                            android:onClick="openResendAllDataToServer"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_resent_all_survey"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/resent_all_survey"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_resent_all_survey"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:text="Resend All Survey To Server"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line11"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:background="@color/darkYellow"
+                            android:gravity="left"
+                            android:clickable="true"
+                            android:onClick="openCropObservationReport"
+                            >
+
+                            <ImageView
+                                android:id="@+id/img_crop_observation_report"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_baseline_timer_white_24" />
+
+                            <TextView
+                                android:id="@+id/crop_observation_report"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/img_crop_observation_report"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="left|center_horizontal|center_vertical"
+                                android:text="Cane Observation Report"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/form_font_size" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>-->
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

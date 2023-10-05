@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="0sp"
+    app:cardUseCompatPadding="false"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_text_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="center_vertical"
+        android:background="#DFDFDF"
+        android:paddingBottom="0sp">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/sup_code"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/sup_name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/sup_code"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/on_date_plot"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/sup_name"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/on_date_area"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/on_date_plot"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/to_date_plot"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/on_date_area"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/to_date_area"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/to_date_plot"
+                android:gravity="right"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="12dp" />
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

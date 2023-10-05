@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.admin.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/AppTheme.ToolbarFont">
+
+            <RelativeLayout
+                android:id="@+id/rl_notification"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/notification"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_notifications_white_24" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:background="@color/form_bg">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_panel">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@drawable/background_image_with_alpha"
+                android:orientation="vertical">
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:alignContent="flex_start"
+                    app:alignItems="flex_start"
+                    app:flexWrap="wrap"
+                    app:justifyContent="flex_start">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openStaffTargetReport"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_plot_finder"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:src="@drawable/targetreport" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_plot_finder"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_TARGET_REPORT"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openVarietyWiseReport"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_variety"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:src="@drawable/variertywisereport" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_variety"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_VARIETY_WISE_TARGET"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openStaffSupervisorVarietyDateWiseAreaReport"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_supervisor_with_variety_area"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:src="@drawable/todayvarietywisereport" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_supervisor_with_variety_area"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_SUPERVISE_VARIETY_WISE_AREA"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openTodayActivityReportVillageWise"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_today_activity_report"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:src="@drawable/report" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_today_activity_report"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_TODAY_VILLAGE_REPORT"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openSeedReservationDetailsReport"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_seed_reservation_details"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:src="@drawable/reservation" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_seed_reservation_details"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_SEED_RESERVATION_DETAILS"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openSeedMapping"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_seed_mapping_report"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:src="@drawable/mapping" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_seed_mapping_report"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_SEED_MAPPING"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openSeedIndentReport"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_seed_indent"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:src="@drawable/indenting" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_seed_indent"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_SEED_INDENT_DETAILS"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openReportOndateTodateTypeOfPlanting"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_seed_indent_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_baseline_date_range_24" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_seed_indent_3"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_ONDATE_TODATE_PLANTING"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openReportTypeOfPlanting"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_seed_indent4"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_baseline_report_24" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_seed_indent4"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_TYPE_PLANTING_REPORT"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openReportVarietyWise"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_seed_indent2"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_baseline_next_plan_24" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_seed_indent2"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_VARIETY_WISE_REPORT"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openReportVarietyWiseOndateTodatePlanting"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_seed_indent1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_baseline_date_range_24" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_seed_indent1"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_VARIETY_WISE_ONDATE_PLANTING"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openReportVillageWithVarietyReport"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_seed_indent5"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:src="@drawable/grower" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_seed_indent5"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_VILLAGE_WISE_PLANTING"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openReportVillageWithPlantingTypeReport"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/img_seed_indent6"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:src="@drawable/villageplant" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_seed_indent6"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_VILLAGE_PLANT_TYPE_WISE_PLANTING"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:clickable="true"
+                            android:onClick="openagriReport"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/agri"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:src="@drawable/villageplant" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/agri"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/MENU_AGRI_DISTRIBUTION_REPORT"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

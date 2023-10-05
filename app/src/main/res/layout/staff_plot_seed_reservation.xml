@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:theme="@style/AppTheme.ToolbarFont"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rec_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="3dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content" >
+
+            <!--    <RelativeLayout
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_village_code"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/input_village_code"
+                            android:layout_width="match_parent"
+                            android:hint="Village Code"
+                            android:fontFamily="@font/roboto_black"
+                            android:inputType="number"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_village_code"
+                        android:layout_width="match_parent"
+                        android:layout_toRightOf="@+id/input_layout_village_code"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/input_village_name"
+                            android:layout_width="match_parent"
+                            android:hint="Village Name"
+                            android:inputType="none"
+                            android:fontFamily="@font/roboto_black"
+                            android:textIsSelectable="false"
+                            android:editable="false"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>-->
+
+                <RelativeLayout
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_village_code"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/canearea_bg"
+                        android:gravity="left"
+                        android:textColor="@color/colorAccent">
+
+                        <EditText
+                            android:id="@+id/input_village_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:background="#00000000"
+                            android:fontFamily="@font/calibri"
+                            android:gravity="left"
+                            android:maxLength="6"
+                            android:hint="@string/MENU_V_CODE"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#000"
+                            android:textSize="15dp" />
+
+                        <!-- <EditText
+                             android:id="@+id/input_village_code"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:fontFamily="@font/roboto_black"
+                             android:hint="Village Code"
+                             android:inputType="number"
+                             android:textColor="@color/colorAccent"
+                             android:textSize="12dp"/>-->
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_village_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/input_layout_village_code"
+                        android:background="@drawable/canearea_bg"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorAccent">
+
+                        <EditText
+                            android:id="@+id/input_village_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:background="#00000000"
+                            android:editable="false"
+                            android:fontFamily="@font/calibri"
+                            android:gravity="left"
+                            android:hint="@string/MENU_V_NAME"
+                            android:inputType="none"
+                            android:padding="5dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#000"
+                            android:textIsSelectable="false"
+                            android:textSize="15dp" />
+
+                        <!--  <EditText
+                              android:id="@+id/input_village_name"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:editable="false"
+                              android:fontFamily="@font/roboto_black"
+                              android:hint="Village Name"
+                              android:inputType="none"
+                              android:textIsSelectable="false"
+                              android:textSize="12dp" />
+  -->
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+
+
+          <!--      <RelativeLayout
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/line1"
+                    android:layout_height="wrap_content" >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_grower_code"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/input_grower_code"
+                            android:layout_width="match_parent"
+                            android:hint="Grower Code"
+                            android:fontFamily="@font/roboto_black"
+                            android:inputType="number"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_grower_name"
+                        android:layout_width="match_parent"
+                        android:layout_toRightOf="@+id/input_layout_grower_code"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/input_grower_name"
+                            android:layout_width="match_parent"
+                            android:hint="Grower Name"
+                            android:fontFamily="@font/roboto_black"
+                            android:inputType="none"
+                            android:textIsSelectable="false"
+                            android:editable="false"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>-->
+
+
+                <RelativeLayout
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line1"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_grower_code"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/canearea_bg"
+                        android:gravity="left"
+                        android:textColor="@color/colorAccent">
+
+                        <EditText
+                            android:id="@+id/input_grower_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:background="#00000000"
+                            android:fontFamily="@font/calibri"
+                            android:gravity="left"
+                            android:hint="@string/MENU_G_CODE"
+                            android:maxLength="6"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#000"
+                            android:textSize="15dp" />
+
+                        <!-- <EditText
+                             android:id="@+id/input_village_code"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:fontFamily="@font/roboto_black"
+                             android:hint="Village Code"
+                             android:inputType="number"
+                             android:textColor="@color/colorAccent"
+                             android:textSize="12dp"/>-->
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_grower_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/input_layout_grower_code"
+                        android:background="@drawable/canearea_bg"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorAccent">
+
+                        <EditText
+                            android:id="@+id/input_grower_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:background="#00000000"
+                            android:editable="false"
+                            android:fontFamily="@font/calibri"
+                            android:gravity="left"
+                            android:hint="@string/MENU_G_NAME"
+                            android:padding="5dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#000"
+                            android:textIsSelectable="false"
+                            android:textSize="15dp" />
+
+                        <!--  <EditText
+                              android:id="@+id/input_village_name"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:editable="false"
+                              android:fontFamily="@font/roboto_black"
+                              android:hint="Village Name"
+                              android:inputType="none"
+                              android:textIsSelectable="false"
+                              android:textSize="12dp" />
+  -->
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+           <!--     <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_grower_father"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/line2"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_grower_father"
+                        android:layout_width="match_parent"
+                        android:hint="Grower Father"
+                        android:inputType="none"
+                        android:fontFamily="@font/roboto_black"
+                        android:textIsSelectable="false"
+                        android:editable="false"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_grower_father"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/line2"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/input_grower_father"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:background="#00000000"
+                        android:editable="false"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:hint="@string/LBL_GROWER_FATHER"
+                        android:inputType="none"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#000"
+                        android:textIsSelectable="false"
+                        android:textSize="15dp" />
+
+                    <!--  <EditText
+                          android:id="@+id/input_village_name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:editable="false"
+                          android:fontFamily="@font/roboto_black"
+                          android:hint="Village Name"
+                          android:inputType="none"
+                          android:textIsSelectable="false"
+                          android:textSize="12dp" />
+-->
+                </com.google.android.material.textfield.TextInputLayout>
+
+       <!--         <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_variety"
+                    android:layout_below="@+id/input_layout_grower_father"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/input_variety"
+                        android:layout_width="match_parent"
+                        android:hint="Variety"
+                        android:fontFamily="@font/roboto_black"
+                        android:inputType="number"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_variety"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/input_layout_grower_father"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:gravity="center_vertical">
+
+                    <Spinner
+                        android:id="@+id/input_variety"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:padding="5dp"
+                        android:textSize="15dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+       <!--         <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_category"
+                    android:layout_below="@+id/input_layout_variety"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/input_category"
+                        android:layout_width="match_parent"
+                        android:hint="Category"
+                        android:fontFamily="@font/roboto_black"
+                        android:inputType="number"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/input_layout_variety"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:gravity="center_vertical">
+
+                    <Spinner
+                        android:id="@+id/input_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:padding="5dp"
+                        android:textSize="15dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            <!--    <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_seed_qty"
+                    android:layout_below="@+id/input_layout_category"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/roboto_black"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/seed_qty"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_black"
+                        android:layout_below="@+id/t_area"
+                        android:hint="Seed Quantity"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="#949494"
+                        android:textSize="@dimen/form_font_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+
+           <!--     <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_rate"
+                    android:layout_below="@+id/input_layout_seed_qty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_black"
+                        android:layout_below="@+id/t_area"
+                        android:hint="Rate"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="#949494"
+                        android:textSize="@dimen/form_font_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+
+              <!--  <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_seed_qty"
+                    android:layout_below="@+id/input_layout_category"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_black"
+                    android:background="@drawable/canearea_bg"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/seed_qty"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_black"
+                        android:layout_below="@+id/t_area"
+                        android:hint="Seed Quantity"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="#949494"
+                        android:textSize="@dimen/form_font_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_seed_qty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/input_layout_category"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/seed_qty"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:background="#00000000"
+                        android:editable="false"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:hint="@string/MENU_SEED_QUANTITY"
+                        android:maxLength="7"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="#949494"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textIsSelectable="false"
+                        android:textSize="15dp" />
+
+                    <!--  <EditText
+                          android:id="@+id/input_village_name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:editable="false"
+                          android:fontFamily="@font/roboto_black"
+                          android:hint="Village Name"
+                          android:inputType="none"
+                          android:textIsSelectable="false"
+                          android:textSize="12dp" />
+-->
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/input_layout_category"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:background="#00000000"
+                        android:editable="false"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:hint="@string/MENU_Rate"
+                        android:maxLength="7"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="#949494"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textIsSelectable="false"
+                        android:textSize="15dp" />
+
+                    <!--  <EditText
+                          android:id="@+id/input_village_name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:editable="false"
+                          android:fontFamily="@font/roboto_black"
+                          android:hint="Village Name"
+                          android:inputType="none"
+                          android:textIsSelectable="false"
+                          android:textSize="12dp" />
+-->
+                </com.google.android.material.textfield.TextInputLayout>
+
+             <!--   <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_mobile_number"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/roboto_black"
+                    android:layout_below="@+id/input_layout_rate"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/mobile_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_black"
+                        android:layout_below="@+id/t_area"
+                        android:hint="Mobile Number"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:textColorHint="#949494"
+                        android:textSize="@dimen/form_font_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/input_layout_seed_qty"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/mobile_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:background="#00000000"
+                        android:editable="false"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:hint="@string/MENU_MOBILE_NUMBER"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#000"
+                        android:textIsSelectable="false"
+                        android:textSize="15dp" />
+
+                    <!--  <EditText
+                          android:id="@+id/input_village_name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:editable="false"
+                          android:fontFamily="@font/roboto_black"
+                          android:hint="Village Name"
+                          android:inputType="none"
+                          android:textIsSelectable="false"
+                          android:textSize="12dp" />
+-->
+                </com.google.android.material.textfield.TextInputLayout>
+
+             <!--   <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_transportation"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/input_layout_mobile_number"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/transportation"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_black"
+                        android:layout_below="@+id/t_area"
+                        android:hint="Transportation"
+                        android:inputType="textCapWords"
+                        android:textColorHint="#949494"
+                        android:textSize="@dimen/form_font_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_transportation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/input_layout_mobile_number"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+
+                    <Spinner
+                        android:id="@+id/transportation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:padding="5dp"
+                        android:textSize="15dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+              <!--  <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_distance"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/input_layout_transportation"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textColor="#000"
+                        android:fontFamily="@font/roboto_black"
+                        android:layout_below="@+id/t_area"
+                        android:hint="Distance"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="#949494"
+                        android:textSize="@dimen/form_font_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/input_layout_transportation"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:background="#00000000"
+                        android:editable="false"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:hint="@string/MENU_Distance"
+                        android:maxLength="7"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#000"
+                        android:textIsSelectable="false"
+                        android:textSize="15dp" />
+
+                    <!--  <EditText
+                          android:id="@+id/input_village_name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:editable="false"
+                          android:fontFamily="@font/roboto_black"
+                          android:hint="Village Name"
+                          android:inputType="none"
+                          android:textIsSelectable="false"
+                          android:textSize="12dp" />
+-->
+                </com.google.android.material.textfield.TextInputLayout>
+
+          <!--      <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_date"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/input_layout_distance"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textColor="#000"
+                        android:layout_below="@+id/t_area"
+                        android:hint="Date"
+                        android:fontFamily="@font/roboto_black"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="#949494"
+                        android:textSize="@dimen/form_font_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/input_layout_distance"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:background="#00000000"
+                        android:editable="false"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:hint="@string/MENU_DATE"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#000"
+                        android:textIsSelectable="false"
+                        android:textSize="15dp" />
+
+                    <!--  <EditText
+                          android:id="@+id/input_village_name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:editable="false"
+                          android:fontFamily="@font/roboto_black"
+                          android:hint="Village Name"
+                          android:inputType="none"
+                          android:textIsSelectable="false"
+                          android:textSize="12dp" />
+-->
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/rl_btn"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/input_layout_date"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.04"
+                        android:background="#7CBC31"
+                        android:clickable="true"
+                        android:fontFamily="@font/roboto_black"
+                        android:onClick="saveData"
+                        android:text="@string/MENU_SAVE"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.04"
+                        android:background="#DA6541"
+                        android:layout_margin="10dp"
+                        android:text="@string/MENU_EXIT"
+                        android:fontFamily="@font/roboto_black"
+                        android:clickable="true"
+                        android:onClick="exit"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "920130021672",
+    "project_id": "bindal-sugar",
+    "storage_bucket": "bindal-sugar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920130021672:android:496386c4c17dabb3bc081d",
+        "android_client_info": {
+          "package_name": "in.co.vibrant.bindalsugar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdofxcTYao1G9-erohzBfitJZ_8Y7Xjb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

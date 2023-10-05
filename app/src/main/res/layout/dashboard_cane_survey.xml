@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.cane_survey.CaneSurveyDashboard">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:onClick="openVarityWiseCenterRunning"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_1"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Variety Summary"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_1"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openCaneTypeSummery"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_2"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Cane Type Summary"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_2"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openSurveyStatus"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_3"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Survey Status"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_3"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openSurveyProgress"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_4"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Survey Progress"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_4"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openSurveyVarity"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_5"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Survey Variety"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_5"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openSurveyCrop"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_6"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Survey Crop"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_6"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/line7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openGrowerFinder"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_7"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/img_7"
+                            android:gravity="left|center_vertical"
+                            android:text="Grower Finder"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openGrowerFinderLastYear"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_16"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_16"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/img_16"
+                            android:gravity="left|center_vertical"
+                            android:text="Grower Finder Last Year"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openVarietyGroupSummery"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_8"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Variety Group Summary"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_8"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openVillageWiseCaneTypeSummery"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_9"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Village Wise Cane Type Summary"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_9"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openVillageWiseVarietySummery"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_10"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Village Wise Variety Summary"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_10"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openVillageWiseVariertyGroupSummery"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_11"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_11"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Village Wise Variety Group Summary"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_11"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openRemainShare"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_12"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Remain Share"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_12"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openSupervisorSummery"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_13"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_13"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Supervisor Summary "
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_13"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openSummeryCaneTypeCategory"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_14"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_14"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Summary CaneType &amp; Category "
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_14"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp"
+                        android:gravity="left"
+                        android:clickable="true"
+                        android:layout_weight=".3"
+                        android:onClick="openPlotOverlappingSummery"
+                        android:background="@color/colorAccent"
+                        android:padding="4sp">
+
+                        <ImageView
+                            android:id="@+id/img_15"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/ic_assignment_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/txt_15"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Overlap Plot Summary"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="left|center_vertical"
+                            android:layout_toRightOf="@+id/img_15"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_add_black_24dp" />-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

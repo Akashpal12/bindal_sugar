@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5sp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_text_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="center_vertical"
+        android:background="#DFDFDF"
+        android:paddingBottom="0sp">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tv_sup_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:textColor="#3F51B5"
+                android:fontFamily="@font/roboto_black"
+                android:text=""
+                android:textSize="15dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_text_area"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rl_text"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvsup_area"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_black"
+                android:text="Total Area"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_sup_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:fontFamily="@font/roboto_black"
+                android:layout_toRightOf="@+id/tvsup_area"
+                android:textStyle="bold"
+                android:text=""
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_text_plot"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rl_text_area"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvsup_plot"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_black"
+                android:text="Total Plot"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_sup_plot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:fontFamily="@font/roboto_black"
+                android:layout_toRightOf="@+id/tvsup_plot"
+                android:textStyle="bold"
+                android:text=""
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_text_grower"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rl_text_plot"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvsup_grower"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:fontFamily="@font/roboto_black"
+                android:textStyle="bold"
+                android:text="Total Grower"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_sup_grower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_toRightOf="@+id/tvsup_grower"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_black"
+                android:text=""
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/rl_text_grower"
+            android:id="@+id/layout_booking"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

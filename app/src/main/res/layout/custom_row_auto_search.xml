@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/tv_villageCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text=""
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/dark_gray"
+        android:textColorHint="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/tv_villageName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text=""
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/light_gray_text"/>
+
+
+</LinearLayout>

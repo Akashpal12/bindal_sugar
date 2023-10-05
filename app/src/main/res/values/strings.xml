@@ -1,0 +1,669 @@
+<resources>
+    <string name="app_name">Bindals Papers Mills Limited</string>
+    <string name="app_name_language">Bindals Papers Mills Limited</string>
+    <string name="language">EN</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="season">2023-2024</string>
+    <string name="MENU_ADD_FAMILY_MEMBER">Add Family Member</string>
+    <string name="season1">SEASON :2023-2024</string>
+    <string name="MENU_ADD_gri">Add Agri Input </string>
+    <string name="MENU_IMPORT_EXPORT" translatable="false">Import/Export Master </string>
+    <string name="Broad_Caste">BroadCasting</string>
+    <string name="MENU_CUT_TO_CRUSH">Cut To Crush</string>
+    <string name="MENU_CUT_TO_CRUSH_ON_DATE">Cut To Crush Till Date</string>
+    <string name="MENU_CANE_DIVERSION">Cane Diversion</string>
+    <string name="MENU_SOIL_SAMPLE">Soil Sample</string>
+
+    <string name="MySharedPref" translatable="false">MySharedPref </string>
+    <string name="MyLat" translatable="false">MyLat </string>
+    <string name="MyLng" translatable="false">MyLng </string>
+    <string name="MyDisease" translatable="false">MyDisease </string>
+    <string name="MySeason" translatable="false">MySeason </string>
+    <string name="MENU_FIND_PLOT" translatable="false">Find Plot</string>
+    <string name="MyGrowerModelList" translatable="false">MyGrowerModelList </string>
+    <string name="listFound" translatable="false">listFound </string>
+    <string name="MENU_DOWNLOAD_CANE_DEVELOPMENT_MASTER">Download Cane Development Master</string>
+    <string name="ChcekPlantingPolygonGrowerModel" translatable="false">ChcekPlantingPolygonGrowerModel </string>
+
+    <string name="MENU_MASTER_CANE_DEVELOPMENT"> 0 Master Cane Development</string>
+    <string name="MENU_DOWNLOAD_PLANTING_DATA">Download Planting Data</string>
+    <string name="MENU_planting_data"> 0 Planting Data</string>
+
+    <string name="MENU_DOWNLOAD_MASTER_DATA">Download Master Data</string>
+    <string name="MENU_DOWNLOAD_CONTROL_DATA">Download Control Data</string>
+    <string name="MENU_DOWNLOAD_VILLAGE_DATA">Download Village Data</string>
+    <string name="MENU_DOWNLOAD_FARMER_DATA">Download Farmer Data</string>
+    <string name="MENU_RESET_ALL_SURVEY">Resend All Survey To Server</string>
+    <string name="MENU_SURVEY_DOWNLOAD">Survey Download</string>
+    <string name="MENU_SURVEY_LAST_SURVEY_DOWNLOAD">Download Last Year Survey Data</string>
+    <string name="MENU_SURVEY_CURRENT_SURVEY_DOWNLOAD">Download Current Year Survey Data</string>
+
+    <string name="MENU_SURVEY_MAster"> Survey Master</string>
+    <string name="MENU_CANE_DEVELOPMENT_MASTER"> Cane Development Master</string>
+    <string name="MENU_RESET_DATABASE">Reset Database</string>
+
+    <string name="LBL_USER_TYPE">Select User Type</string>
+    <string name="LBL_STAFF">Staff</string>
+    <string name="LBL_ADMIN">Admin</string>
+    <string name="LBL_GROWER">Grower</string>
+    <string name="LBL_GROWER_FATHER">Grower Father</string>
+    <string name="LBL_GROWER_CODE">Grower Code</string>
+    <string name="LBL_CONTACT_PERSONE_NAME">Contact Person Name</string>
+    <string name="LBL_CONTACT_PERSONE_NUMBER">Contact Person Number</string>
+    <string name="LBL_TOTAL_PERSON_PRESENT">Total Person Present</string>
+    <string name="LBL_VILLAGE_CODE">Village Code</string>
+    <string name="LBL_USER_NAME">Username</string>
+    <string name="LBL_ENTER_REPLY">Enter Reply</string>
+    <string name="LBL_PASSWORD">Password</string>
+    <string name="LBL_OTP">OTP?</string>
+    <string name="LBL_PENDING_TODAY_ACTIVITIES">Pending/Today\'s Activities</string>
+    <string name="LBL_POTATO_ACTIVITIES">Potato Activities</string>
+    <string name="LBL_POTATO_PENDING_TODAY_ACTIVITIES">Potato Pending/Today\'s Activities</string>
+    <string name="LBL_TARGETS">Targets</string>
+    <string name="LBL_NEXT_LAVEL">Next Level Targets</string>
+    <string name="LBL_CANE_ACTIVITIES">Cane Activities</string>
+    <string name="LBL_CANE_PENDING_TODAY_ACTIVITIES">Cane Pending/Today\'s Activities</string>
+    <string name="LBL_AREA">Area</string>
+    <string name="LBL_MIX_CROP">Mix Crop</string>
+    <string name="LBL_PLOT_VILLAGE">Plot Village</string>
+    <string name="CANE_DEVELOPMRNT_REPORT">Cane Development Report</string>
+    <string name="LBL_VARIETY">Variety</string>
+    <string name="LBL_TOTAL_WORK_DURATION">Total Work Duration</string>
+    <string name="LBL_REMARK">Remark</string>
+    <string name="LBL_CANE_RELATED">Cane Related</string>
+    <string name="LBL_POTATO_RELATED">Potato Related</string>
+    <string name="LBL_ISSUE_TYPE">Select Issue Type</string>
+    <string name="LBL_DESCRIPTION">Description</string>
+    <string name="LBL_HISTORY">History</string>
+    <string name="LBL_CHAT_HISTORY">Chat History</string>
+    <string name="LBL_COMMUNITY_LIST">Community List</string>
+    <string name="MENU_CHECK_PENDING_SERVER">Check Pending Server Data</string>
+    <string name="MENU_ALL_SURVEY_DATA">All Survey Data</string>
+
+
+    <string name="LBL_COL_START_DATE">Start Date : </string>
+    <string name="LBL_COL_END_DATE">End Date : </string>
+    <string name="LBL_COL_TARGET">Target : </string>
+    <string name="LBL_COL_TARGET_AREA">Target Area : </string>
+    <string name="LBL_COL_TARGET_GROWER">Target Grower : </string>
+    <string name="LBL_COL_ACHIEVEMENT">Achievement : </string>
+    <string name="LBL_COL_TOTAL_DAYS">Total Days : </string>
+    <string name="LBL_COL_DAYS_PASSED">Days Passed : </string>
+    <string name="LBL_COL_BALANCE">Balance : </string>
+    <string name="LBL_COL_NO_OF_DAYS_TO_COMP">No of Days Comp. : </string>
+    <string name="LBL_COL_DELAY">Delay : </string>
+    <string name="LBL_COL_EARLY">Early : </string>
+    <string name="LBL_SELECT">Select</string>
+    <string name="LBL_GROWER_LIST">Grower List</string>
+    <string name="LBL_VILLAGE">Village</string>
+    <string name="LBL_COL_COMPLETE_AREA">Complete Area : </string>
+    <string name="LBL_COL_COMPLETE_GROWER">Complete Grower : </string>
+    <string name="LBL_COL_BALANCE_AREA">Balance Area : </string>
+    <string name="LBL_COL_BALANCE_GROWER">Balance Grower : </string>
+    <string name="LBL_COL_COMPLETE_AREA_EXP_DAYS">Com Area Exp Days : </string>
+    <string name="LBL_COL_COMPLETE_GROWER_EXP_DAYS">Com Grower Exp Days : </string>
+    <string name="LBL_COL_AREA_DELAY">Area Delay/Early : </string>
+    <string name="LBL_COL_GROWER_DELAY">Grower Delay/Early : </string>
+    <string name="LBL_COL_AREA">Area : </string>
+    <string name="LBL_COL_GROWER">Grower : </string>
+
+
+    <string name="MSG_LOGIN">Enter username and password to proceed</string>
+    <string name="MSG_NEED_PERMISSION">Need Permission</string>
+    <string name="MSG_NEED_PERMISSION_REQUEST">Application need some permission to running smoothely</string>
+    <string name="MSG_PLEASE_ENTER">Please Enter</string>
+    <string name="MSG_INVALID_CREDENTIALS">Please Enter valid credentials</string>
+    <string name="MSG_SELECT_LANGUAGE">Select Language</string>
+    <string name="MSG_NOT_VARIETY">Sorry !! sugarcane variety not identified we keep this record for future use</string>
+    <string name="MSG_NOT_DISEASE">Sorry !! sugarcane disease not identified we keep this record for future use</string>
+    <string name="MSG_PLEASE_WAIT">Please wait while we getting details</string>
+
+    <string name="ACTION_PROFILE">Profile</string>
+    <string name="ACTION_CHANGE_PASSWORD">Change Password</string>
+    <string name="ACTION_LOGOUT">Log Out</string>
+    <string name="ACTION_LANGUAGE">Language</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="MENU_PARENT_CODE">Parent Village Code</string>
+    <string name="MENU_PARENT_VILL_NAME">Parent Village NAME</string>
+    <string name="MENU_PARENT_GROW_NAME">Parent Grow NAME</string>
+    <string name="MENU_PARENT_GROW_CODE">Parent Grow Code</string>
+    <string name="MENU_PARENT_GROW_FNAME">Parent Grow Father Name</string>
+    <string name="MENU_MEMBER_LIST">MEMBER LIST</string>
+    <string name="MENU_Capacity">Capacity</string>
+    <string name="MENU_Search_village_code">Search village code</string>
+    <string name="MENU_Search_grower_code">Search grower code</string>
+    <string name="MENU_Choose_Photo">Choose Photo</string>
+    <string name="MENU_Choose_Document">Choose Document</string>
+    <string name="MENU_Signature">Signature</string>
+    <string name="MENU_Clear_Signature">Clear Signature</string>
+    <string name="MENU_Capture_Fingerprint">Capture Fingerprint</string>
+    <string name="MENU_BIOMETRIC_THUMB">Please put your left thumb on biometric device</string>
+    <string name="MENU_Message">Message</string>
+    <string name="MENU_CAPTURE_THUMB">Capture Thumb</string>
+    <string name="MENU_Photo">Photo</string>
+    <string name="MENU_Document">Document</string>
+    <string name="MENU_Next">Next >>></string>
+    <string name="MENU_SEARCH_MATERIAL">Search material code</string>
+    <string name="MENU_Enter_quantity">Enter quantity</string>
+    <string name="MENU_TOTAL_AMOUNT">Total amount =</string>
+    <string name="MENU_No_data_added">No data added</string>
+    <string name="MENU_Employee">Employee</string>
+    <string name="MENU_select_Zone">-- Select Zone --</string>
+    <string name="MENU_Circle">-- Select Circle --</string>
+    <string name="MENU_Supervisor">-- Select Supervisor --</string>
+    <string name="MENU_Select_Village">-- Select Village --</string>
+    <string name="MENU_Subject">Subject</string>
+    <string name="MENU_Select_Grower">-- Select Grower --</string>
+    <string name="MENU_status">status</string>
+    <string name="MENU_sebject">--  Subject --</string>
+    <string name="MENU_Enter_message">enter message</string>
+    <string name="MENU_Cane_Type">Cane Type</string>
+    <string name="MENU_Variety">Variety</string>
+    <string name="MENU_Cane_Cut">Cane Cut</string>
+    <string name="MENU_Cane_Supply_Purchi">Cane Supply Purchi</string>
+    <string name="MENU_Issued_Purchi_No">Issued Purchi No</string>
+    <string name="MENU_enter_vill_code">Enter Vill Code</string>
+    <string name="MENU_enter_grow_code">Enter Grow Code</string>
+    <string name="MENU_Relation">Relation</string>
+    <string name="MENU_Select_Relation">Select Relation</string>
+    <string name="MENU_Mem_purchi">Mem Purchi No.</string>
+    <string name="MENU_Enter_mem_purchi">Enter Member Purchi no.</string>
+    <string name="MENU_Mode_supply">Mode Of Supply</string>
+    <string name="MENU_On_Day_Cut">On day Cut (Qtls)</string>
+    <string name="MENU_Enter_On_Day_Cut">Enter on day Cut (Qtls)</string>
+    <string name="MENU_Enter_Next_Day_Cut">Enter Next day Cut (Qtls)</string>
+    <string name="MENU_Next_Day_Cut">next day Cut(Qtls))</string>
+    <string name="MENU_Cutting_day">Cutting day</string>
+    <string name="MENU_Enter_Cutting_day">Enter Cutting day</string>
+    <string name="MENU_Vehicle_No">Vehicle No.</string>
+    <string name="MENU_Enter_Vehicle_No">Enter Vehicle No.</string>
+    <string name="MENU_Grower_vill">Grower Village</string>
+    <string name="MENU_Quantity_Cane">Quantity of cane</string>
+    <string name="MENU_Reason">Reason</string>
+    <string name="MENU_Kolhu">Kolhu</string>
+    <string name="MENU_DESCRIPTION">DESCRIPTION</string>
+    <string name="MENU_Soil_Type">Soil Type</string>
+    <string name="MENU_Land_Type">Land Type</string>
+    <string name="MENU_Previous_Type">Previous Crop</string>
+    <string name="MENU_Present_Type">Present Crop</string>
+    <string name="MENU_Next_Type">Next Crop</string>
+    <string name="MENU_BroadCaste_Report">Broad Cast Report</string>
+
+    <string name="purchy">Purchy</string>
+    <string name="purchy_list">Purchy List</string>
+    <string name="purchy_list_show">Purchy Details Show</string>
+    <string name="navigation_drow">Navigation Drawer</string>
+
+    <string name="MENU_PENDING_INDENTING">PENDING INDENTING ON SERVER</string>
+    <string name="MENU_FAILED_INDENTING">FAILED INDENTING ON SERVER</string>
+    <string name="MENU_UPLOAD_INDENT">UPLOADED INDENTING ON SERVER</string>
+    <string name="MENU_PENDING_PLANTING">PENDING PLANTING ON SERVER</string>
+    <string name="FAILED_PLANTING">FAILED PLANTING ON SERVER</string>
+    <string name="MENU_UPLOAD_PLANTING">UPLOADED PLANTING ON SERVER</string>
+
+
+    <string name="TOTAL_USER">Total</string>
+    <string name="TOTAL_PRESENT">Present</string>
+    <string name="TOTAL_CHECK_IN">Check In</string>
+    <string name="TOTAL_CHECK_OUT">Check Out</string>
+    <string name="MENU">Menu</string>
+    <string name="MENU_DEVELOPMENT">Development</string>
+    <string name="MENU_LOAN_ACTIVITY">Loan Activity</string>
+    <string name="MENU_ASK_AN_EXPORT">Ask an Expert</string>
+    <string name="MENU_COMMUNITY">Community</string>
+    <string name="MENU_CANE_DEVELOPMENT">Bindal Sugar</string>
+    <string name="MENU_POTATO_DEVELOPMENT">Potato Development</string>
+    <string name="MENU_CANE_LOAN">Cane Loan</string>
+    <string name="MENU_POTATO_LOAN">Potato Loan</string>
+    <string name="MENU_GROWER_DETAILS">Grower Details</string>
+    <string name="MENU_ACTIVITIES">Activities</string>
+    <string name="MENU_ROUTE_FINDER">Route Finder</string>
+    <string name="MENU_ACCOUNT_DETAILS">Account Details</string>
+    <string name="MENU_SURVEY">Survey</string>
+    <string name="MENU_MISCELLANEOUS">Miscellaneous</string>
+    <string name="MENU_CALENDER">Calender</string>
+    <string name="MENU_PURCHY">Purchey</string>
+    <string name="MENU_WEIGHTMENT">Weightment</string>
+    <string name="MENU_PAYMENT">Payment</string>
+    <string name="MENU_CANE_DETAILS">Cane Details</string>
+    <string name="MENU_POTATO_DETAILS">Potato Details</string>
+    <string name="MENU_PLOT_IDENTIFICATION">Plot Identification</string>
+    <string name="MENU_BACK">Back</string>
+    <string name="MENU_CANE_ACTIVITIES">Cane Activities</string>
+    <string name="MENU_POTATO_ACTIVITIES">Potato Activities</string>
+    <string name="MENU_ACTIVITY_FORM">Activity Form</string>
+    <string name="MENU_GROWER_PLOT_ENTRY">Grower Plot Entry</string>
+    <string name="MENU_SEED_ENTRY">Seed Entry</string>
+    <string name="MENU_AGRI_INDENTING">Agri Indenting</string>
+    <string name="MENU_SEED_INDENTING"> Indenting</string>
+    <string name="MENU_SEED_RESERVATION">Seed Reservation</string>
+    <string name="MENU_PLANTING">Planting</string>
+    <string name="MENU_ACTIVITY_SCHEDULE">Activity Schedule</string>
+    <string name="MENU_DOWNLOAD_MASTER">Download Master</string>
+    <string name="MENU_REPORT">Report</string>
+    <string name="MENU_REPORT_TARGET">Report Target Wise</string>
+    <string name="MENU_REPORT_NON_TARGET">Report Non Target Wise</string>
+    <string name="MENU_ATTENDANCE">Attendance</string>
+    <string name="MENU_SEED_MAPPING">Seed Mapping</string>
+    <string name="MENU_CANE_MARKETING">Cane Marketing</string>
+    <string name="MENU_PLOT_FINDER_PATH_FINDER">Plot Path Finder</string>
+    <string name="MENU_DELETE_SHARE_PLOT">Delete Share Plot</string>
+    <string name="MENU_VILLAGE_WISE_CANETYPE_SUMMARY">Village Wise Cane Type Summary</string>
+    <string name="MENU_VILLAGE_WISE_VARIETY_SUMMARY">Village Wise Variety Summary</string>
+    <string name="MENU_VILLAGE_WISE_VARIETY_GROUP_SUMMARY">Village Wise Variety Group Summary</string>
+    <string name="MENU_SUPERVISOR_WISE_SUMMARY">Supervisor Summary</string>
+    <string name="MENU_CANETYPE_CATEGORY">Cane Type &amp; Category</string>
+    <string name="MENU_VARIETY_SUMMARY">Variety Summary</string>
+    <string name="MENU_VARIETY_GROUP_SUMMARY">Variety Group Summary</string>
+    <string name="MENU_CANETYPE_SUMMARY">Cane Type Summary</string>
+    <string name="MENU_GROWER_WISE_REPORT">Grower Wise Report</string>
+    <string name="MENU_CHECK_LIST_REPORT">Check List Report</string>
+    <string name="MENU_MAP_VIEW_REPORT">Map View Report</string>
+    <string name="MENU_CANE_OBSERVATION_REPORT">Cane Observation Report</string>
+    <string name="MENU_REMAIN_SHARE">Remain Share</string>
+    <string name="MENU_PLOT_OVERLAPPING">Plot Overlapping</string>
+    <string name="MENU_PLOT_MAP_VIEW">Plot Map View</string>
+    <string name="MENU_CROP_OBSERVATION_VIEW">Crop Observation</string>
+    <string name="MENU_CROP_GROWTH_OBSERVATION_VIEW">Crop Growth Observation</string>
+    <string name="MENU_VARIETY_WISE_REPORT">Variety Wise Report</string>
+    <string name="MENU_MAP_VIEW_REPORT_REPORT">Map View Report</string>
+
+    <string name="MENU_TARGET_REPORT">Target Report</string>
+    <string name="MENU_SUPERVISE_VARIETY_WISE_AREA">Today Variety Wise Target</string>
+    <string name="MENU_SURVEY_REPORT">Survey Report</string>
+    <string name="MENU_ZONE_WISE_AREA_REPORT">Zone Wise Area</string>
+    <string name="MENU_ZONE_WITH_VARIETY_REPORT">Zone With Variety</string>
+    <string name="MENU_ZONE_WITH_CIRCLE_REPORT">Zone With Circle</string>
+    <string name="MENU_VARIETY_WITH_ZONE_REPORT">Variety With Zone</string>
+    <string name="MENU_SUPERVISOR_WITH_VARIETY_REPORT">Supervisor With Variety</string>
+    <string name="MENU_VILLAGE_WISE_VARIETY_REPORT">Village Wise Variety Summery</string>
+    <string name="MENU_SUPERVISOR_SUMMARY">Supervisor Report</string>
+    <string name="MENU_CIRCLE_REPORT">Circle Report</string>
+    <string name="MENU_VILLAGE_WISE_TARGET">Village Wise Target</string>
+    <string name="MENU_VARIETY_WISE_TARGET">Variety Wise Target</string>
+    <string name="MENU_GROWER_FINDER">Grower Finder</string>
+    <string name="MENU_NEW_PLOT_SURVEY">New Plot Survey</string>
+    <string name="MENU_VERITAL_CHECK">Varietal Check</string>
+    <string name="MENU_PLOT_ACTIVITY">Plot Activity</string>
+    <string name="MENU_SEED_DISTRIBUTION">Seed Distribution</string>
+    <string name="MENU_SEED_RESERVATION_DETAILS">Seed Reservation Details</string>
+    <string name="MENU_SEED_INDENT_DETAILS">Seed Indent Details</string>
+    <string name="MENU_ONDATE_TODATE_PLANTING">Ondate and Todate Type of Planting</string>
+    <string name="MENU_TYPE_PLANTING_REPORT">Type Of Planting Report</string>
+    <string name="MENU_VARIETY_WISE_PLANTING">Variety Wise Planting</string>
+    <string name="MENU_VARIETY_WISE_ONDATE_PLANTING">Variety Wise Ondate Todate Planting</string>
+    <string name="MENU_VILLAGE_WISE_PLANTING">Village  Variety Wise Planting</string>
+    <string name="MENU_VILLAGE_PLANT_TYPE_WISE_PLANTING">Village Plant type Wise Planting</string>
+    <string name="MENU_TODAY_VILLAGE_REPORT">Today Village Wise Activity Report</string>
+    <string name="MENU_AGRI_DISTRIBUTION_REPORT">Agri Distribution Report</string>
+
+    <string name="MENU_SEED_QUANTITY_MAP">Seed Quantity Map</string>
+    <string name="MENU_PLOT_VILL_NO">Plot Village Number</string>
+    <string name="MENU_GROWER_PLOT_NUM">Grower Plot Number</string>
+    <string name="MENU_PRONOT_NUM">Pronot Number </string>
+    <string name="MENU_SPRAY_NUM">Spray Number </string>
+    <string name="MENU_SPRAY_AREA">Spray Area (in Hec.)</string>
+    <string name="MENU_PLOT_AREA">Plot Area (in Hec.)</string>
+    <string name="MENU_SAMPLE_BEFORE">Sample Before</string>
+    <string name="MENU_SAMPLE_AFTER">Sample After</string>
+    <string name="MENU_DRIVER_NAME">Driver Name</string>
+    <string name="MENU_TRACTOR_NAME">Tractor Number</string>
+    <string name="MENU_AREA_HEC">Area Hec</string>
+    <string name="MENU_GROWER_NAME">Grower Name</string>
+    <string name="MENU_Category">Category</string>
+    <string name="MENU_Standing_Cane">Standing Cane</string>
+    <string name="MENU_ACTIVITY_NUM">Activity Number</string>
+    <string name="MENU_ADD_ACTIVITY">Add Activity</string>
+    <string name="MENU_ACTIVITY_ITEM">Activity Item</string>
+    <string name="MENU_Spray">Spray</string>
+    <string name="MENU_VEHICLE_COLLECTION">Vehicle Collection</string>
+    <string name="MENU_VEHICLE_NUMBER">Vehicle Number</string>
+    <string name="MENU_GROWER_DOCUMENT">Grower Document</string>
+    <string name="MENU_SUPERVISER_PERFORMANCE_REPORT" >Supervisor Performance Report</string>
+    <string name="MENU_PLOT_ACTIVITY_SUM_REPORT" >Plot Activity Summary Report</string>
+    <string name="MENU_ATTENDANCE_REPORT" >Attendence Report</string>
+    <string name="MENU_GIS_LEADS_PLOT" >GIS Leads Plots</string>
+    <string name="MENU_GIS_LEADS_REPORT" >GIS Leads Report</string>
+    <string name="MENU_CRM_SUMMARY_REPORT" >CRM Summary Report</string>
+    <string name="MENU_LIVE_LOCATION" >Live Location</string>
+    <string name="MENU_SEARCH">SEARCH</string>
+    <string name="MENU_From_Date">From Date</string>
+    <string name="MENU_To_Date">To Date</string>
+    <string name="MENU_Search_Cane_Observation">Search Cane Observation</string>
+
+
+    <string name="MENU_PLOT_SR_NO">Plot Sr No</string>
+    <string name="MENU_CANE_DEVEL">Cane Development</string>
+    <string name="MENU_KHASHRA_NUM">Khashra Number</string>
+    <string name="MENU_GATA_NUM">Gata Number</string>
+    <string name="MENU_HECTARE">Hectare</string>
+    <string name="MENU_DISEASE">Disease</string>
+    <string name="MENU_CROP_CONDITION">Crop Condition</string>
+    <string name="MENU_Irrigation">Irrigation</string>
+    <string name="MENU_Cane_Earthing">Cane Earthing</string>
+    <string name="MENU_Cane_Proping">Cane Proping</string>
+    <string name="MENU_BrixPurcent">BrixPercentage</string>
+    <string name="MENU_CROP_OBSERVATION_GRAPH">Crop Observation Graph</string>
+    <string name="MENU_SET_SURVEY_VILLAGE">Set Survey Village</string>
+
+
+    <string name="MENU_PLOT_CONDITION">Plot Condition</string>
+    <string name="MENU_ROW_ROW">Row to Row space (In meters) </string>
+    <string name="MENU_GERMINATION">Germination (In %) </string>
+    <string name="MENU_AVERAGE">Average Tillers (In Meter) </string>
+    <string name="MENU_AVERAGE_MILLABLE">Average  Millable Cane (In Meter) </string>
+    <string name="MENU_AVERAGE_HEIGHT">Average height of cane (In CM.) </string>
+    <string name="MENU_AVERAGE_GIRTH">Average Girth of Cane (In CM.)  </string>
+    <string name="MENU_AVERAGE_WEIGHT">Average  weight of  cane (Kgs.) </string>
+
+
+    <string name="MENU_LOAN_DETAILS">Loan Details</string>
+
+    <string name="MENU_PURCHEY_DETAILS">Purchey Details</string>
+    <string name="MENU_PAYMENT_DETAILS">Payment Details</string>
+    <string name="MENU_WEIGHTNMENT_DETAILS">Weightment Details</string>
+    <string name="MENU_DATA_ON_SERVER">Data On Server</string>
+    <string name="MENU_PENDING_SHARE">Pending Share</string>
+    <string name="MENU_IMPORT_DATA">Import Data</string>
+    <string name="MENU_EXPORT_DATA">Export Data</string>
+    <string name="MENU_SPRAY">Spray</string>
+    <string name="MENU_PLOUGHING">Ploughing</string>
+    <string name="MENU_DASHBOARD">Dashboard</string>
+
+    <string name="MENU_REQUEST">Request</string>
+
+
+    <string name="BTN_LOGIN">LOGIN</string>
+    <string name="BTN_REPLY">REPLY</string>
+    <string name="BTN_OK">OK</string>
+    <string name="BTN_YES">Yes</string>
+    <string name="BTN_LATER">Later</string>
+    <string name="BTN_CALCULATE">Calculate</string>
+    <string name="BTN_CLOSE_MAP">Close Map</string>
+    <string name="BTN_NAVIGATION">Natigation</string>
+    <string name="BTN_SAVE">Save</string>
+    <string name="BTN_CAPTURE_IMAGE">Capture Image</string>
+    <string name="BTN_RECORD_VIDEO">Record Video</string>
+    <string name="BTN_ENABLE_GPS">Enable GPS?</string>
+
+
+    <string name="UPDATE_APP">Update Application</string>
+    <string name="UPDATE_YES">Update Now</string>
+    <string name="UPDATE_TAKE_A_PICTURE">Take A Picture</string>
+    <string name="oops_connect_your_internet">No internet</string>
+    <string name="ERR_GPS_ENABLE">GPS Service not enable</string>
+
+    <string name="technical_error" />
+
+
+    <string name="SERVERDATA_MENU_PENDING_INDENTING_ON_SERVER">Pending Indent Data On Server</string>
+    <string name="SERVERDATA_MENU_fAILED_INDENTING_ON_SERVER">Failed Indent Data On Server</string>
+    <string name="SERVERDATA_MENU_UPLOAD_INDENTING_ON_SERVER">Uploaded Indent Data On Server</string>
+    <string name="SERVERDATA_MENU_PENDING_PLANTING_ON_SERVER">Pending Planting Server Data</string>
+    <string name="SERVERDATA_MENU_FAILED_PLANTING_ON_SERVER">Failed Planting Server Data</string>
+    <string name="SERVERDATA_MENU_UPLOAD_PLANTING_ON_SERVER">Uploaded Planting Server Data</string>
+    <string name="SERVERDATA_MENU_CANE_SERVER_DATA">Cane Survey Data</string>
+    <string name="MENU_CANETYPE">Cane Type</string>
+    <string name="MENU_Proceed">Proceed</string>
+    <string name="MENU_Refresh_Plot">Refresh Plot</string>
+    <string name="MENU_SHARE">Share</string>
+    <string name="MENU_CHECK_IN">CHECK IN</string>
+    <string name="MENU_google_maps_key">google_maps_key</string>
+
+
+    <string name="save_photoes">Save photes</string>
+    <string name="view_saved_photoes">View saved photes</string>
+    <string name="choose_photo_1">Photo Identity</string>
+    <string name="choose_photo_2">Document Identity</string>
+    <string name="photo_1">Photo Identity</string>
+    <string name="photo_2">Document Identity</string>
+    <string name="agri_input_form">Agri Input form</string>
+    <string name="agri_input_detail">Agri Input detail</string>
+    <string name="add_material">Add material</string>
+    <string name="report">Report</string>
+
+    <string name="grower_code_not">Grower code not found</string>
+
+    <string name="Save_signature">Save signature</string>
+    <string name="clear_signature">Clear signature</string>
+    <string name="view_saved_signature">View saved signature</string>
+    <string name="signature_here">Signature inside box</string>
+    <string name="user_not_found">User Not Found</string>
+    <string name="enter_correct_pass">Oops! your password is incorrect</string>
+    <string name="no_data_found">No Data Found.</string>
+    <string name="login_succ">Login successfully..</string>
+    <string name="offline_work">There is no internet please login offline</string>
+    <string name="photo_save_succ">Photoes save successfully</string>
+    <string name="signature_save_succ">Signature save successfully</string>
+    <string name="save_thumb">Save Thumb</string>
+    <string name="enter_village">Please enter village code</string>
+    <string name="enter_grower">Please enter grower code</string>
+    <string name="save_sucee">Data save successfully</string>
+    <string name="thisCode">Village code already exits</string>
+
+
+    <string name="MENU_INDENTING">Indenting</string>
+    <string name="MENU_ALL_DATA">All Data</string>
+
+
+    <string name="MENU_V_CODE">V Code</string>
+    <string name="MENU_V_NAME">V Name</string>
+    <string name="MENU_G_CODE">G Code</string>
+    <string name="MENU_G_NAME">G Name</string>
+    <string name="MENU_FATHER_NAME">Father Name</string>
+    <string name="MENU_PLOT_VILL_CODE">Plot Vill Code</string>
+    <string name="MENU_PLOT_VILL_NAME">Plot Vill Name</string>
+    <string name="MENU_PLOT_SERIAL_NUMBER">Plot Serial Number</string>
+
+
+    <string name="MENU_PLOT_VILL">PLOT VILLAGE</string>
+    <string name="MENU_PLOT_NO">PLOT NUMBER</string>
+    <string name="MENU_TOTCTC">CTC DATE</string>
+
+
+    <string name="MENU_CORNER">Corner</string>
+    <string name="MENU_LATTITUDE">Lattitude</string>
+    <string name="MENU_LONGITUDE">Longitude</string>
+    <string name="MENU_DIST">Dist</string>
+    <string name="MENU_ACCUR">Accur.</string>
+    <string name="MENU_EAST">East.</string>
+    <string name="MENU_SOUTH">South.</string>
+    <string name="MENU_WEST">West.</string>
+    <string name="MENU_NORTH">North.</string>
+    <string name="MENU_MANUAL_AREA">Manual Area</string>
+    <string name="MENU_CAPTURE_LOCATION">Capture Location.</string>
+    <string name="MENU_VIEW_ON_MAP">View On Map</string>
+    <string name="MENU_RESET_LOCATION">Reset Location</string>
+    <string name="MENU_AREA_METER">Area Meter</string>
+    <string name="MENU_AREA_HECT">Area Hect</string>
+    <string name="MENU_MOBILE_NUMBER">Mobile Number</string>
+    <string name="MENU_INDENTING_DATE">Indenting Date</string>
+    <string name="MENU_DATE"> Date</string>
+    <string name="MENU_SAVE"> Save</string>
+    <string name="MENU_EXIT"> Exit</string>
+    <string name="MENU_SEED_BAG_QUANTITY"> Seed/Bag Quantity</string>
+    <string name="MENU_IS_NURSERY"> Is Nursery ?</string>
+    <string name="MENU_IS_IDEAL"> Is Ideal ?</string>
+
+
+    <string name="MENU_INDENT_AREA"> Indent Area</string>
+    <string name="MENU_ADD_EQUIPMENT"> Add Equipment</string>
+    <string name="MENU_ACTUAL_AREA"> Actual Area</string>
+    <string name="MENU_GROWER_PLOT_SR_NO"> Grower Plot Sr No</string>
+    <string name="MENU_GROWER_NO_OF_PLOT"> No Of Plot</string>
+    <string name="MENU_QUANTITY"> Quantity</string>
+    <string name="MENU_ADD_ITEM">Add Item</string>
+    <string name="MENU_NO_OFF_PLANT">No Of Plot</string>
+    <string name="MENU_SEED_QUANTITY">Seed Quantity</string>
+    <string name="MENU_Rate">Rate</string>
+    <string name="MENU_Distance">Distance</string>
+    <string name="MENU_OTHER_AMOUNT">Other Amount</string>
+    <string name="MENU_PUR_VILL_CODE">Pur Village Code</string>
+    <string name="MENU_VILL_NAME">Village Name</string>
+    <string name="MENU_PUR_GROWER_CODE">Pur Grower Code</string>
+    <string name="MENU_PUR_GROWER_NAME">Pur Grower Name</string>
+    <string name="MENU_PUR_GROWER_FATHER">Pur Grower Father</string>
+    <string name="MENU_MILL_PURCHEY_NUMBER">Mill Purchey Number</string>
+
+
+    <string name="MENU_INDENTING_CANE_AREA">Indenting Cane Area</string>
+    <string name="MENU_PLANTING_CANE_AREA">Planting Cane Area</string>
+    <string name="MENU_SEED_DISTRIBUTION_CANE_AREA">Seed Distribution Cane Area</string>
+    <string name="MENU_SEED_MAPPING_CANE_AREA">Seed Mapping Cane Area</string>
+    <string name="MENU_SPRAY_CANE_AREA"> Plot Spray</string>
+    <string name="MENU_PLOUGHING_CANE_AREA"> Ploughing</string>
+    <string name="MENU_NEARBY_PLOT"> Near By Plot View</string>
+
+    <string name="MENU_Verital_check"> varietal Check</string>
+
+    <string name="MENU_Server_DATA"> server Data Menu</string>
+    <string name="MENU_PLOT_SPRAY"> Plot Spray</string>
+    <string name="MENU_NEW_PLOT_ENTRY"> New Plot Entry</string>
+    <string name="MENU_PLANT_METHOD">Plant Method</string>
+    <string name="MENU_LAND_TYPE">Land Type</string>
+    <string name="MENU_BORDER_CROP">Border Crop</string>
+    <string name="MENU_GHASTHI_NUM">Ghashti Number</string>
+    <string name="MENU_PLANT_DATE">Plant Date</string>
+    <string name="MENU_PENDING_SHARE_LIST">Pending Share List</string>
+    <string name="MENU_CROP_OBSERVATION">Crop Obsevation</string>
+    <string name="MENU_CROP_GROWTH">Crop Growth Obsevation</string>
+    <string name="MENU_Soil_Sample">Soil Sample List</string>
+
+    <string name="MENU_CANE_DATA_LIST">Cane Data List</string>
+    <string name="MENU_ALL_SERVER_DATA">ALL server Data </string>
+    <string name="MENU_CANE_TYPE_SUMMARY_REPORT">Cane Type Summary Report</string>
+
+    <string name="MENU_VARIETY_SUMMARY_REPORT">Variety Summary Report</string>
+
+    <string name="MENU_CROP_OBSERVATION_REPORT">Crop Observation Report</string>
+
+    <string name="MENU_UPDATE_CROP_OBSERVATION">Update Crop Observation</string>
+    <string name="MENU_PUC_PLOT_ACTIVITY" translatable="false">GIS Leads Plot Activity</string>
+    <string name="MENU_ADD_GROWER_SHARE">Add Grower Share %</string>
+    <string name="MENU_VARITAL_CHECK">Varital Check</string>
+    <string name="MENU_UPDATE_PLOT_DETAILS">Update Plot Details</string>
+    <string name="MENU_IMPORT_MASTER_DATA">Import Master Data</string>
+    <string name="MENU_IMAGE">IMAGE</string>
+    <string name="MENU_GROWER_ENQUIRY">Grower Enquiry</string>
+    <string name="MENU_INDENT_REPORT">Indent Report</string>
+    <string name="MENU_SOIL_SAMPLE_COLLECTION">Soil Sample Collection</string>
+    <string name="MENU_GROWER_ACCOUNT_DETAILS">GROWER ACCOUNT DETAIL</string>
+    <string name="MENU_AGRI_INPUT">Agri Input Form</string>
+    <string name="MENU_DELETE_SHARE_LIST">Delete Share List</string>
+
+    <string name="MENU_Type_of_planting">Type Of Planting</string>
+    <string name="MENU_Resend_All_Data_To_Server">Resend All Data To Server</string>
+    <string name="PRINT">Print</string>
+    <string name="MENU_TRUCK_TRANSPORT">Truck Transport</string>
+    <string name="MENU_TRUCK_FACTOEY">Total factory</string>
+
+    <string name="MENU_TRUCK_TOTAL">Total Truck</string>
+    <string name="MENU_TRUCK__Total_CENTER">Total Center</string>
+    <string name="MENU_TRUCK_TRIP">Total Trip</string>
+    <string name="MENU_TRUCK_TRAVEL">Total Travel</string>
+    <string name="MENU_TRUCK_FAST">Fast</string>
+    <string name="MENU_TRUCK_LIVE">Live Tracking</string>
+    <string name="MENU_TRUCK_SuMMERY">Summary</string>
+    <string name="MENU_TRUCK_YARD">Truck In Yard</string>
+    <string name="MENU_TRUCK_TRANSIT">Truck In Transit</string>
+    <string name="MENU_TRUCK_CENTER">Truck In Center</string>
+
+
+    <string name="LBL_TRUCK_REGISTRATION">Truck Registration</string>
+    <string name="LBL_TRANSPORTER">Transporter</string>
+    <string name="LBL_FACTORY_STAFF">Factory Staff</string>
+    <string name="LBL_EMPLOYEE">Employee</string>
+    <string name="LBL_LOADER">Loader</string>
+    <string name="LBL_TRUCK">Truck</string>
+    <string name="LBL_WEIGHTMENT">Weightment</string>
+    <string name="LBL_EXIT">Exit</string>
+    <string name="LBL_STAFF_CODE">Employee Code</string>
+    <string name="LBL_TRUCK_NUMBER">Truck Number</string>
+    <string name="LBL_TRANS_CODE">Transporter Code</string>
+    <string name="LBL_DRIVER_NAME">Driver Name</string>
+    <string name="LBL_DRIVER_MOBILE">Driver Mobile</string>
+    <string name="LBL_COMPANY_NAME">Company Name</string>
+    <string name="LBL_CONTACT_PERSON">Contact Person</string>
+    <string name="LBL_MOBILE">Mobile</string>
+    <string name="LBL_EMAIL">Email</string>
+    <string name="LBL_GST">GST Number</string>
+    <string name="LBL_PAN">PAN Number</string>
+    <string name="LBL_DESIGNATION">Designation</string>
+    <string name="LBL_NAME">Name</string>
+    <string name="LBL_FACTORY_LIST">Factory List</string>
+    <string name="LBL_TRUCK_LIST">Truck List</string>
+    <string name="LBL_TRUCK_LOGIN_MSG">Please enter your truck number to continue. Please note that no white space will accepted on truck number</string>
+    <string name="LBL_TRANS_LOGIN_MSG">Please enter your transporter code to continue</string>
+    <string name="LBL_STAFF_LOGIN_MSG">Please enter your employee code to continue</string>
+    <string name="LBL_ADD_FACTORY">Add New Factory</string>
+    <string name="LBL_TOWARDS_CENTRE">Towards Centre</string>
+
+    <string name="MENU_ZAURI">Bindals Papers Mills Limited</string>
+    <string name="MENU_SUGUR_MILL">Bindals Papers Mills Limited</string>
+    <string name="LBL_TOWARDS_GATE">Towards Gate</string>
+
+
+    <string name="village_downloaded">Village already downloaded.</string>
+    <string name="village_downloaded_succ">Village download successfully.</string>
+    <string name="village_not_found">Village Not Found.</string>
+    <string name="village_master_download">Please download village.</string>
+
+    <string name="grower_downloaded">Grower already downloaded.</string>
+    <string name="grower_downloaded_succ">Grower download successfully.</string>
+    <string name="grower_not_found">Grower Not Found.</string>
+    <string name="grower_master_download">Please download grower.</string>
+
+    <string name="material_downloaded">Material already downloaded.</string>
+    <string name="material_downloaded_succ">Material download successfully.</string>
+    <string name="material_not_found">Material Not Found.</string>
+    <string name="material_master_download">Please download material.</string>
+    <string name="master_add">Material add successfully.</string>
+    <string name="master_added">Material added successfully.</string>
+    <string name="master_duplicate_added">Material already added.</string>
+
+    <string name="desc_fingerprint">Please place your finger print on the scanner to verify your identity</string>
+    <string name="mess">(Your device should have at least one fingerprint registered in device settings)</string>
+
+    <!-- <string name="note">(Fingerprint sign in makes your app login much faster. Your device should have at least one fingerprint registered in device settings)</string>
+-->
+    <string name="title_fingerprint">One-touch Sign In</string>
+    <string name="dNot">Your device doesn"t" support fingerprint authentication</string>
+    <string name="signature">Signature</string>
+    <string name="thumb">Thumb</string>
+    <string name="submit">Submit</string>
+    <string name="add">Add</string>
+
+    <string name="PlotVillage">Plot Village</string>
+    <string name="PlotNo">Plot No.</string>
+    <string name="VarietyGroup">Variety Group</string>
+    <string name="VarietyName">Variety Name</string>
+    <string name="CropType">CropType</string>
+    <string name="Area">Area</string>
+    <string name="Supcodce">Supcode</string>
+    <string name="SUPNAME">SupName</string>
+    <string name="DataOfPlanting">Data Of Planting</string>
+
+    <string name="GH_NE_LAT">GH_NE_LAT</string>
+    <string name="GH_NE_LNG">GH_NE_LNG</string>
+
+    <string name="GH_NW_LAT">GH_NW_LAT</string>
+    <string name="GH_NW_LNG">GH_NW_LNG</string>
+
+    <string name="GH_SE_LAT">GH_SE_LAT</string>
+    <string name="GH_SE_LNG">GH_SE_LNG</string>
+
+    <string name="GH_SW_LAT">GH_SW_LAT</string>
+    <string name="GH_SW_LNG">GH_SW_LNG</string>
+
+
+    <bool name="is_right_to_left">false</bool>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

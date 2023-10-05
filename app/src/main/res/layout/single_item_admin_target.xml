@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    app:cardCornerRadius="5sp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:paddingBottom="5sp">
+
+        <RelativeLayout
+            android:id="@+id/rlLayoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:padding="7sp">
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_textview"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvCount"
+                android:layout_toLeftOf="@+id/tv_delay"
+                android:paddingLeft="6dp"
+                android:gravity="left|center_vertical"
+                android:text="Employee 1"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_delay"
+                android:layout_width="90dp"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:text="Delay : 0"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlLayoutHeader"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <!--<RelativeLayout
+                android:id="@+id/rLayoutLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/tvfactoryname"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_gray"
+                    android:text="@string/LBL_NAME"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_factoryname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvfactoryname"
+                    android:paddingLeft="3dp"
+                    android:text=""
+                    android:textColor="@color/light_gray"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>-->
+            <LinearLayout
+                android:id="@+id/rLayoutLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/start_date"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Total Village : 6"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:paddingLeft="3dp"
+                    android:text="Total Grower : 24"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rLayoutLine2"
+                android:layout_below="@+id/rLayoutLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Total Area : 465"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:paddingLeft="3dp"
+                    android:text="Target Area : 365"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rLayoutLine3"
+                android:layout_below="@+id/rLayoutLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Area : 78.49 %"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:paddingLeft="3dp"
+                    android:text="Achieved  : 30.98 %"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rLayoutLine4"
+                android:layout_below="@+id/rLayoutLine3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Balance : 69.02 %"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:paddingLeft="3dp"
+                    android:text="No of Days Comp. : 49"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rLayoutLine5"
+                android:layout_below="@+id/rLayoutLine4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Passed Days : 20 "
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:paddingLeft="3dp"
+                    android:text="Balance Days : 29"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rLayoutLine6"
+                android:layout_below="@+id/rLayoutLine5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Target days to completed : 35 "
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:paddingLeft="3dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutLine7"
+                android:layout_below="@+id/rLayoutLine6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_toLeftOf="@+id/textper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:max="100"
+                    android:progress="30"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    />
+
+                <TextView
+                    android:id="@+id/textper"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:paddingLeft="3dp"
+                    android:text="30.98 %"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

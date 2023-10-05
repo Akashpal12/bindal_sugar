@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/opendetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layoutsoil"
+        app:cardBackgroundColor="#DBF6BB"
+        app:cardMaxElevation="4dp"
+        app:cardPreventCornerOverlap="true">
+
+
+        <LinearLayout
+            android:id="@+id/linear_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DBF6BB"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textStyle="bold">
+
+                <RelativeLayout
+                    android:id="@+id/rlLayoutHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#81BA40"
+                    android:padding="7sp">
+
+                    <TextView
+                        android:id="@+id/tvCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_textview"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="center"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_grower_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tvCount"
+                        android:fontFamily="@font/calibri"
+                        android:paddingLeft="6dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+
+                    <ImageView
+                        android:id="@+id/ivEdit"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/calibri"
+                        android:src="@drawable/ic_baseline_edit_24" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlLayoutHeader"
+                    android:background="#DBF6BB"
+                    android:textStyle="bold">
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="1dp"
+                        android:layout_height="132dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:paddingLeft="8dp" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1dp"
+                        android:layout_height="132dp"
+                        android:layout_marginLeft="170dp"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:paddingLeft="8dp" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rlLayoutHeader"
+                        android:background="@color/black"
+                        tools:ignore="NotSibling" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rLayoutLine2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:textStyle="bold">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:textStyle="bold">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:orientation="horizontal"
+                                android:textStyle="bold">
+
+                                <TextView
+                                    android:id="@+id/tvfathername"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/calibri"
+                                    android:text="@string/MENU_FATHER_NAME"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:textStyle="bold">
+
+                                <TextView
+                                    android:id="@+id/tv_father_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/view"
+                                    android:fontFamily="@font/calibri"
+                                    android:paddingLeft="30dp"
+                                    android:text=""
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rLayoutLine2"
+                        android:background="@color/black" />
+
+
+                    <LinearLayout
+                        android:id="@+id/rLayoutLine3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rLayoutLine2"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:textStyle="bold">
+
+                        <LinearLayout
+                            android:id="@+id/rLayoutLine7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:textStyle="bold">
+
+                            <TextView
+                                android:id="@+id/tvplotvillage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/calibri"
+                                android:text="@string/LBL_PLOT_VILLAGE"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/rLayoutLine7"
+                            android:layout_weight="0.6"
+                            android:textStyle="bold">
+
+                            <TextView
+                                android:id="@+id/tv_plot_village"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/tvplotvillage"
+                                android:fontFamily="@font/calibri"
+                                android:paddingLeft="30dp"
+                                android:text=""
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rLayoutLine3"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/rLayoutLine4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rLayoutLine3"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/rLayoutLine8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:textStyle="bold">
+
+                            <TextView
+                                android:id="@+id/tvgrowervillage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/calibri"
+                                android:text="@string/MENU_Grower_vill"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:layout_toRightOf="@+id/rLayoutLine8"
+                            android:textStyle="bold">
+
+                            <TextView
+                                android:id="@+id/tv_grower_village"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/tvgrowervillage"
+                                android:fontFamily="@font/calibri"
+                                android:paddingLeft="30dp"
+                                android:text=""
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rLayoutLine5"
+                        android:background="@color/black" />
+
+
+                    <LinearLayout
+                        android:id="@+id/rLayoutLine5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rLayoutLine4"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:gravity="left"
+                            android:orientation="horizontal"
+                            android:padding="5sp">
+
+                            <TextView
+                                android:id="@+id/tv_variety"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/calibri"
+                                android:text=""
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:gravity="left"
+                            android:orientation="horizontal"
+                            android:padding="5sp">
+
+                            <TextView
+                                android:id="@+id/tv_cane_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/calibri"
+                                android:paddingLeft="7dp"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rLayoutLine4"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/rLayoutLine6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rLayoutLine5"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:gravity="left"
+                            android:orientation="horizontal"
+                            android:padding="5sp">
+
+                            <TextView
+                                android:id="@+id/tv_cane_area"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/calibri"
+                                android:paddingLeft="3dp"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:gravity="left"
+                            android:orientation="horizontal"
+                            android:padding="5sp">
+
+                            <TextView
+                                android:id="@+id/tv_variety_group"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:fontFamily="@font/calibri"
+                                android:paddingLeft="3dp"
+                                android:text=""
+
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/rLayoutLine6"
+                        android:background="@color/black" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+
+
+

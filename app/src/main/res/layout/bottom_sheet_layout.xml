@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/checkOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Out"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textSize="25dp"
+        android:layout_margin="4dp"
+        android:textColor="#2A6C10"/>
+    <TextView
+        android:id="@+id/checkIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check In "
+        android:gravity="center"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_margin="4dp"
+        android:textColor="#45088F"/>
+    <TextView
+        android:id="@+id/current_time"
+        android:layout_width="match_parent"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="hello"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/image_preview"
+        android:layout_width="match_parent"
+        android:rotation="90"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:scaleType="centerInside"/>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:backgroundTint="#1A237E"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Save"/>
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="match_parent"
+        android:backgroundTint="#E65100"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/white"
+        android:text="Exit"/>
+
+
+
+
+</LinearLayout>

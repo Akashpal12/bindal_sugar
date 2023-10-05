@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.supervisor.StaffMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/AppTheme.ToolbarFont">
+
+            <LinearLayout
+                android:id="@+id/rlLayoutHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="@dimen/_25sdp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/bindal_logo" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/linear_amtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/plot_code_name_sno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/send"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/MENU_ZAURI"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/tvCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:text="@string/MENU_SUGUR_MILL"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#FCFCFF"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_notification"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/notification"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_notifications_white_24" />
+
+            </RelativeLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:background="@color/form_bg">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_image_with_alpha">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/line0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/welcome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/division"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity=""
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/division"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/version"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="left"
+                            android:text=""
+                            android:visibility="gone"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/version"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="right"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line1"
+                        app:cardBackgroundColor="@color/colorAccent"
+                        app:cardCornerRadius="10dp"
+                        android:layout_gravity="center"
+                        app:cardElevation="0dp"
+                        app:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_black"
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:text="Activity Planner"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line1"
+                        app:cardBackgroundColor="@color/colorAccent"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/Card_Attendence"
+                        android:layout_gravity="center"
+                        app:cardElevation="0dp"
+                        android:textColor="@color/white"
+                        app:cardUseCompatPadding="true">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:weightSum="3"
+                           android:orientation="horizontal">
+                           <TextView
+                               android:id="@+id/attendance"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_weight="1"
+                               android:padding="10dp"
+                               android:textStyle="bold"
+                               android:textColor="@color/white"
+                               android:text="ATENDANCE"/>
+                           <TextView
+                               android:id="@+id/inTime"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_weight="1"
+                               android:padding="10dp"
+                               android:textStyle="bold"
+                               android:textColor="@color/white"
+                               android:text=""/>
+                           <TextView
+                               android:id="@+id/outTime"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_weight="1"
+                               android:textStyle="bold"
+                               android:textColor="@color/white"
+                               android:padding="10dp"
+                               android:text=""/>
+                       </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_below="@+id/line0"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openOldActivity"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardBackgroundColor="#EAE5E5"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/day_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="21-Sep"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_day_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_below="@+id/day_1"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openOldActivity"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardBackgroundColor="#EAE5E5"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/day_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="21-Sep"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_day_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_below="@+id/day_2"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openOldActivity"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardBackgroundColor="#EAE5E5"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/day_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="21-Sep"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_day_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_below="@+id/day_3"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openOldActivity"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardBackgroundColor="#EAE5E5"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/day_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="21-Sep"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_day_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_below="@+id/day_4"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".25"
+                        app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                        app:cardElevation="@dimen/dashboard_card_elevation"
+                        app:cardUseCompatPadding="true">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_day_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/day_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="21-Sep"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_day_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@+id/day_5"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/colorAccent"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/reschedule"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@+id/txt_day_5"
+                                android:fontFamily="@font/roboto_black"
+                                android:layout_alignParentEnd="true"
+                                android:text="Reschedule"
+                                android:textColor="@color/black"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_below="@+id/line0"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openOldActivity"
+                            android:backgroundTint="#EAE5E5"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/day_6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="21-Sep"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_day_6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/day_6"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openOldActivity"
+                            android:backgroundTint="#EAE5E5"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/day_7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="21-Sep"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_day_7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/day_7"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_weight=".25"
+                            android:baselineAligned="false"
+                            android:clickable="true"
+                            android:onClick="openOldActivity"
+                            android:backgroundTint="#EAE5E5"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/day_8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="21-Sep"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_day_8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/day_8"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openOldActivity"
+                            app:cardBackgroundColor="#EAE5E5"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/day_9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="21-Sep"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_day_9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/day_9"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line1"
+                        app:cardBackgroundColor="@color/colorAccent"
+                        app:cardCornerRadius="10dp"
+                        android:layout_gravity="center"
+                        app:cardElevation="0dp"
+                        app:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_black"
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:text="@string/MENU"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_below="@+id/line0"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openDevelopment"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_about"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/ic_baseline_menu_accent_24" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_about"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openGrowerAskExportForm"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_about3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/ic_baseline_add_circle_outline_24" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_about3"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_COMMUNITY"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openGrower"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_about4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/growerdetails" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_about4"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_GROWER_DETAILS"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openAgriInputDetails"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_about14"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/activityschedule" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_about14"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_ADD_gri"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_below="@+id/line0"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openCutcrush"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:gravity="left"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_crash"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/crush" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_crash"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_CUT_TO_CRUSH"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openDiversion"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_div"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/diversion" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_div"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_CANE_DIVERSION"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openSoiltesting"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_soil"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/soiltest" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_soil"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_SOIL_SAMPLE"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:onClick="openpurchy"
+                            android:visibility="visible"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/purchy_img"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/report" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/purchy_img"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/purchy"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/line3"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_below="@+id/line0"
+                        android:layout_margin="10dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openBroadCasting"
+                            android:visibility="visible"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_boast"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/broadcast" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_boast"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/Broad_Caste"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:onClick="openBroadCastReport"
+                            android:visibility="gone"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_boastReport"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/report" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_boastReport"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_BroadCaste_Report"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:onClick="openTransport"
+                            android:visibility="gone"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/img_googlemap"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:src="@drawable/van" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/img_googlemap"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center"
+                                    android:text="@string/MENU_TRUCK_TRANSPORT"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/target"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line1"
+                        app:cardBackgroundColor="@color/colorAccent"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        app:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_black"
+                            android:padding="10dp"
+                            android:text="@string/MENU_CROP_OBSERVATION_GRAPH"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_target"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/target"
+                        android:visibility="gone" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/chart1"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_below="@+id/target" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/l_village"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pending_today_activities"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <Spinner
+                            android:id="@+id/village"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab_cane_potato"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/l_village"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/caneActivityCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openCaneActivities"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#FFC107"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_about"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/MENU_CANE_ACTIVITIES"
+                                android:textColor="@color/white"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/potatoActivityCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".25"
+                            android:clickable="true"
+                            android:onClick="openPotatoActivities"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="@color/colorAccent"
+                            app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                            app:cardElevation="@dimen/dashboard_card_elevation"
+                            app:cardUseCompatPadding="true">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/img_about"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/MENU_POTATO_ACTIVITIES"
+                                android:textColor="@color/white"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

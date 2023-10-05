@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.supervisor.StaffMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/AppTheme.ToolbarFont">
+
+            <RelativeLayout
+                android:id="@+id/rl_notification"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/notification"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_notifications_white_24" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_image_with_alpha">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_reason"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_aadhar_number"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@drawable/canearea_bg">
+
+                            <TextView
+                                android:id="@+id/t_reason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="14dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="Reason"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15dp" />
+
+
+                            <Spinner
+                                android:id="@+id/input_type_of_reason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/t_reason"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/calibri"
+                                android:inputType="number"
+                                android:textColor="#000"
+                                android:textColorHint="#949494"
+                                android:textSize="16dp" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_type_soil"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_aadhar_number"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@drawable/canearea_bg">
+
+                            <TextView
+                                android:id="@+id/t_type_of_soil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="Type of soil"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15dp" />
+
+
+                            <Spinner
+                                android:id="@+id/input_type_of_soil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/t_type_of_soil"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/calibri"
+                                android:inputType="number"
+                                android:textColor="#000"
+                                android:textColorHint="#949494"
+                                android:textSize="16dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_type_of_land"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@drawable/canearea_bg">
+
+                            <TextView
+                                android:id="@+id/t_type_of_land"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/calibri"
+                                android:text="Type of land"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15dp" />
+
+
+                            <Spinner
+                                android:id="@+id/input_type_of_land"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/t_type_of_land"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/calibri"
+                                android:hint="Select Crop Condition"
+                                android:inputType="number"
+                                android:textColor="#000"
+                                android:textColorHint="#949494"
+                                android:textSize="15dp" />
+
+                        </RelativeLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/input_layout_sprayno"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/canearea_bg"
+                            android:gravity="center_vertical"
+                            android:padding="8dp">
+
+                            <EditText
+                                android:id="@+id/input_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:background="#00000000"
+                                android:editable="false"
+                                android:fontFamily="@font/calibri"
+                                android:gravity="left"
+                                android:hint="Date"
+                                android:inputType="none"
+                                android:padding="5dp"
+                                android:textColor="@color/colorAccent"
+                                android:textColorHint="#000"
+                                android:textIsSelectable="false"
+                                android:textSize="15dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_quantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/input_layout_manual_area"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/canearea_bg"
+                            android:gravity="center_vertical"
+                            android:padding="5dp">
+
+                            <EditText
+                                android:id="@+id/txt_quantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:background="#00000000"
+                                android:editable="false"
+                                android:fontFamily="@font/calibri"
+                                android:gravity="left"
+                                android:hint="Previous Crop "
+                                android:inputType="textCapWords"
+                                android:padding="5dp"
+                                android:textColor="#000"
+                                android:textColorHint="#949494"
+                                android:textIsSelectable="false" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_crop"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/input_layout_manual_area"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/canearea_bg"
+                            android:gravity="center_vertical"
+                            android:padding="8dp">
+
+                            <EditText
+                                android:id="@+id/txt_crop"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:background="#00000000"
+                                android:editable="false"
+                                android:fontFamily="@font/calibri"
+                                android:gravity="left"
+                                android:hint="Present Crop"
+                                android:inputType="textCapWords"
+
+                                android:padding="5dp"
+                                android:textColor="#000"
+                                android:textColorHint="#949494"
+                                android:textIsSelectable="false" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_next"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/input_layout_manual_area"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/canearea_bg"
+                            android:gravity="center_vertical"
+                            android:padding="8dp">
+
+                            <EditText
+                                android:id="@+id/txt_next"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:background="#00000000"
+                                android:editable="false"
+                                android:fontFamily="@font/calibri"
+                                android:gravity="left"
+                                android:hint="Next Crop"
+                                android:inputType="textCapWords"
+                                android:padding="5dp"
+                                android:textColor="#000"
+                                android:textColorHint="#949494"
+                                android:textIsSelectable="false" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:layout_width="173dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_margin="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="0.5"
+                            android:background="@color/colorPrimaryDark"
+                            android:clickable="true"
+                            android:fontFamily="@font/calibri"
+                            android:onClick="saveData"
+                            android:padding="5dp"
+                            android:text="Collect"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

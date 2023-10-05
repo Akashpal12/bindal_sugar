@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/opendetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+            android:id="@+id/linear_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/rlLayoutHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#81BA40"
+                    android:padding="7sp">
+
+                    <TextView
+                        android:id="@+id/tvCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="start"
+                        android:text="1"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="34dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:background="@color/white"
+                        android:paddingLeft="8dp" />
+
+
+                    <TextView
+                        android:id="@+id/ActivityName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ivimage"
+                        android:layout_toRightOf="@+id/view"
+                        android:fontFamily="@font/calibri"
+                        android:paddingLeft="6dp"
+                        android:layout_centerVertical="true"
+                        android:textStyle="bold"
+                        android:text="Activity Name"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_Date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ivimage"
+                        android:layout_toRightOf="@+id/view"
+                        android:fontFamily="@font/calibri"
+                        android:paddingLeft="6dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:id="@+id/ivimage"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/ivVideo"
+                        android:src="@drawable/ic_baseline_photo_library_24" />
+
+
+                    <ImageView
+                        android:id="@+id/ivVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_baseline_video_library_24" />
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/linear_main1"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/layoutsoil"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|left"
+                            android:layout_marginTop="3dp"
+                            android:gravity="left|center"
+                            android:maxLines="1"
+                            android:text="Crop Condition"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:layout_weight="0.2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=":"
+                            android:textStyle="bold"
+                            android:layout_weight="0.1"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/CROPCONDITION"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:layout_weight="0.7"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_title"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|left"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Disease"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:layout_weight="0.2"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=":"
+                            android:textStyle="bold"
+                            android:layout_weight="0.1"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/DISEASE"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:layout_weight="0.7" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_amtxt1"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/linear_title">
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Irrigation"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:layout_weight="0.2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=":"
+                            android:textStyle="bold"
+                            android:layout_weight="0.1"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+
+
+                        <TextView
+                            android:id="@+id/IRRIGATION"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:layout_weight="0.7"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linear_amtxt"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/linear_title">
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Cane Earthing"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:layout_weight="0.2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=":"
+                            android:textStyle="bold"
+                            android:layout_weight="0.1"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+
+
+                        <TextView
+                            android:id="@+id/COJ_CANEERATHING"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:layout_weight="0.7"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linear_amtxt2"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/linear_amtxt1">
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Cane Proping"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:layout_weight="0.2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=":"
+                            android:textStyle="bold"
+                            android:layout_weight="0.1"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+
+
+                        <TextView
+                            android:id="@+id/COJ_CANEPROPPING"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:layout_weight="0.7"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linear_amtxt3"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/linear_amtxt2">
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Activity Type"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:layout_weight="0.2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=":"
+                            android:textStyle="bold"
+                            android:layout_weight="0.1"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+
+
+                        <TextView
+                            android:id="@+id/ACTIVITYTYPE"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:layout_weight="0.7"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linear_amtxt4"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/linear_amtxt3">
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Activity Method"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:layout_weight="0.2"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=":"
+                            android:textStyle="bold"
+                            android:layout_weight="0.1"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+
+
+                        <TextView
+                            android:id="@+id/ACTIVITYMATHOD"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:layout_weight="0.7"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

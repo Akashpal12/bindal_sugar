@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvAgri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/calibri"
+            android:gravity="center"
+            android:text="Agri"
+            android:textColor="@color/green"
+            android:textSize="@dimen/_22sdp" />
+
+        <TextView
+            android:id="@+id/tv_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvAgri"
+            android:fontFamily="@font/calibri"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_2sdp"
+            android:text="Input"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_22sdp" />
+
+        <TextView
+            android:id="@+id/tv_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAgri"
+            android:fontFamily="@font/calibri"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:text="Request"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_22sdp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/calibri"
+        android:gravity="center|right"
+        android:text=""
+        android:textColor="@color/green"
+        android:textSize="@dimen/_10sdp" />
+</RelativeLayout>

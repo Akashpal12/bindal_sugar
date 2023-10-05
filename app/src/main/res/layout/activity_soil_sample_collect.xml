@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.supervisor.StaffMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/AppTheme.ToolbarFont">
+
+            <RelativeLayout
+                android:id="@+id/rl_notification"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/notification"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_notifications_white_24" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:background="@color/form_bg">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_image_with_alpha">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/t_village_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:text="Village" />
+
+                    <EditText
+                        android:id="@+id/village_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:background="#00000000"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:hint=" "
+                        android:inputType="none"
+                        android:textColor="#000"
+                        android:textColorHint="#949494"
+                        android:textIsSelectable="false"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/t_grower_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:text="Grower" />
+
+                    <EditText
+                        android:id="@+id/grower_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:background="#00000000"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:hint=" "
+                        android:inputType="none"
+                        android:textColor="#000"
+                        android:textColorHint="#949494"
+                        android:textIsSelectable="false"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/t_plot_sr_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/calibri"
+                        android:text="Plot Serial Number" />
+
+                    <EditText
+                        android:id="@+id/plot_sr_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:background="#00000000"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:hint=" "
+                        android:inputType="none"
+                        android:textColor="#000"
+                        android:textColorHint="#949494"
+                        android:textIsSelectable="false"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/canearea_bg">
+
+                    <TextView
+                        android:id="@+id/t_reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="@string/MENU_Reason"
+                        android:textSize="14dp" />
+
+
+                    <Spinner
+                        android:id="@+id/input_type_of_reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/t_reason"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:hint="Select Reason"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:textColorHint="#949494"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_type_soil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/canearea_bg">
+
+                    <TextView
+                        android:id="@+id/t_type_soil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="@string/MENU_Soil_Type" />
+
+                    <Spinner
+                        android:id="@+id/input_type_of_soil"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/t_type_soil"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:hint="Select Soil Type"
+                        android:textColor="#000"
+                        android:textColorHint="#949494"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_land_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/canearea_bg">
+
+                    <TextView
+                        android:id="@+id/t_land_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="@string/MENU_Land_Type" />
+
+                    <Spinner
+                        android:id="@+id/input_type_of_land"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/t_land_type"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:hint="Select Land Type"
+                        android:textColor="#000"
+                        android:textColorHint="#949494"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_previous_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/canearea_bg">
+
+                    <TextView
+                        android:id="@+id/t_previous_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="@string/MENU_Previous_Type" />
+
+                    <Spinner
+                        android:id="@+id/input_type_of_previous"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/t_previous_type"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:hint="Select Previous Type"
+                        android:textColor="#000"
+                        android:textColorHint="#949494"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_ind_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/input_layout_mobile_number"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:gravity="center_vertical"
+                    android:padding="3dp">
+
+                    <EditText
+                        android:id="@+id/ind_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/t_area"
+                        android:layout_gravity="left"
+                        android:background="#00000000"
+                        android:editable="false"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:hint="@string/MENU_DATE"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="#000"
+                        android:textColorHint="#949494"
+                        android:textIsSelectable="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_present_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/canearea_bg">
+
+                    <TextView
+                        android:id="@+id/t_present_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="@string/MENU_Present_Type" />
+
+                    <Spinner
+                        android:id="@+id/input_type_of_present"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/t_present_type"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:hint="Select present Type"
+                        android:textColor="#000"
+                        android:textColorHint="#949494"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_next_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/canearea_bg">
+
+                    <TextView
+                        android:id="@+id/t_next_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:text="@string/MENU_Next_Type" />
+
+                    <Spinner
+                        android:id="@+id/input_type_of_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/t_next_type"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/calibri"
+                        android:hint="Select Next Type"
+                        android:textColor="#000"
+                        android:textColorHint="#949494"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_image_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/l_description"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@color/pink"
+                        android:clickable="true"
+                        android:fontFamily="@font/roboto_black"
+                        android:onClick="openCam"
+                        android:text="@string/BTN_CAPTURE_IMAGE"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@color/colorAccent"
+                        android:clickable="true"
+                        android:fontFamily="@font/roboto_black"
+                        android:onClick="openRecorder"
+                        android:text="@string/BTN_RECORD_VIDEO"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/l_description"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+
+                    <Button
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@color/colorAccent"
+                        android:clickable="true"
+                        android:fontFamily="@font/calibri"
+                        android:onClick="saveData"
+                        android:text="@string/BTN_SAVE"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

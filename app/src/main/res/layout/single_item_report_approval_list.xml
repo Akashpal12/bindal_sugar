@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="0sp"
+    app:cardUseCompatPadding="false"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_text_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="center_vertical"
+        android:background="#000"
+        android:paddingBottom="0sp">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:gravity="center"
+                android:foregroundGravity="center"
+                android:buttonTint="@color/colorAccent"
+                />
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/calibri"
+                android:layout_toRightOf="@+id/checkBox"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt1"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt2"
+                android:fontFamily="@font/calibri"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt3"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt5"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt4"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt6"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt5"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt7"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt6"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt8"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt7"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+
+            <TextView
+                android:id="@+id/txt9"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt8"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt10"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt9"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt11"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt10"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/txt12"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txt11"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/black">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="844dp"
+                android:layout_height="32dp"
+                android:layout_margin=".5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="Date"
+                android:textSize="13dp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/main_layout_Box"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <TextView
+                    android:id="@+id/supervisoe_code_Name"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="32dp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="Super Viser Code/Name"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="120dp"
+                    android:layout_height="32dp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textSize="13dp"
+                    android:text="Total"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <TextView
+                    android:id="@+id/approved"
+                    android:layout_width="120dp"
+                    android:layout_height="32dp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="Approved"
+                    android:textSize="13dp"
+
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <TextView
+                    android:id="@+id/pending"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="Pending"
+                    android:textSize="13dp"
+
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <TextView
+                    android:id="@+id/reject"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="Reject"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <TextView
+                    android:id="@+id/not_Answered"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="Not Answered"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+                <RelativeLayout
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:layout_height="32dp">
+                    <ImageView
+                        android:id="@+id/details_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/report"/>
+                    <TextView
+                        android:id="@+id/details_txt"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_margin=".5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="Details"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

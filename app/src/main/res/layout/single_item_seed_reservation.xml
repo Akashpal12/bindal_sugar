@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="0sp"
+    app:cardUseCompatPadding="false"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_text_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="center_vertical"
+        android:background="#DFDFDF"
+        android:paddingBottom="0sp">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/village"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+              android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/grower"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/village"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/grower_father"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/grower"
+                android:gravity="center"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/variety"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/grower_father"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/transporter"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/variety"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/qty"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/transporter"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/rate"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/qty"
+                android:gravity="right"
+                android:fontFamily="@font/calibri"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="15dp" />
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

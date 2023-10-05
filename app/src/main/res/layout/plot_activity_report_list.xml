@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+
+            <TextView
+                android:id="@+id/SrNo"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_margin=".5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="Sr No."
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+
+            <TextView
+                android:id="@+id/plot_vill_Name"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="30dp"
+                android:layout_margin=".5dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:text="Plot Village Code/ Name"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+
+            <TextView
+                android:id="@+id/plots_onDate"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_margin=".5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="Plots"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+
+            <TextView
+                android:id="@+id/area_onDate"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_margin=".5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="Area"
+                android:textColor="@color/black"
+                 />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+
+            <TextView
+                android:id="@+id/plots_todate"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_margin=".5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="Plots"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+
+            <TextView
+                android:id="@+id/area_todate"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_margin=".5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="Area"
+                android:textColor="@color/black"
+                 />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+
+            <LinearLayout
+                android:layout_width="@dimen/_100sdp"
+                android:id="@+id/details"
+                android:layout_margin=".5dp"
+                android:background="@color/white"
+                android:layout_height="30dp">
+                <ImageView
+                    android:id="@+id/my_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/report"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

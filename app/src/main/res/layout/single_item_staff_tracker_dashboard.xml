@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="2dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="2dp"
+    app:cardCornerRadius="5sp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:paddingBottom="5sp">
+
+        <RelativeLayout
+            android:id="@+id/rlLayoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:padding="7sp">
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_textview"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_village"
+                android:layout_toRightOf="@+id/tvCount"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="6dp"
+                android:text="COJ 85 Plantation"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_village"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/roboto_black"
+                android:paddingLeft="6dp"
+                android:text="Delay : 0"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlLayoutHeader"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <!--<RelativeLayout
+                android:id="@+id/rLayoutLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/tvfactoryname"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_gray"
+                    android:text="@string/LBL_NAME"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_factoryname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvfactoryname"
+                    android:paddingLeft="3dp"
+                    android:text=""
+                    android:textColor="@color/light_gray"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>-->
+            <LinearLayout
+                android:id="@+id/rLayoutLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Start Date : 01/04/2020"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:paddingLeft="3dp"
+                    android:text="End Date : 30/06/2020"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rLayoutLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutLine1"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/target_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Target : 453"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/target_grower"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:paddingLeft="3dp"
+                    android:text="Achievement: 33 %"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rLayoutLine3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutLine2"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/complete_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Total Days : 90"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/complete_grower"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:paddingLeft="3dp"
+                    android:text="Days Passed : 30"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rLayoutLine4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutLine3"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/balance_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Balance : 60"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/balance_grower"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:paddingLeft="3dp"
+                    android:text="No of Days Comp. : 60"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rLayoutLine5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutLine4"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/area_exp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Balance : 60"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/grower_exp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:paddingLeft="3dp"
+                    android:text="No of Days Comp. : 60"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rLayoutLine6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutLine5"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/area_delay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Balance : 60"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/grower_delay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:paddingLeft="3dp"
+                    android:text="No of Days Comp. : 60"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/rLayoutLine7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutLine6"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/textper"
+                    android:focusable="false"
+                    android:max="100"
+                    android:progress="33" />
+
+                <TextView
+                    android:id="@+id/textper"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:paddingLeft="3dp"
+                    android:text="33%"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutLine8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutLine7"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar_grower"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/textper_grower"
+                    android:focusable="false"
+                    android:max="100"
+                    android:progress="33" />
+
+                <TextView
+                    android:id="@+id/textper_grower"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/tvfather_name"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/roboto_black"
+                    android:paddingLeft="3dp"
+                    android:text="33%"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

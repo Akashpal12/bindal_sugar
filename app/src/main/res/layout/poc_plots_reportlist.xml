@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_layout_Box"
+            android:layout_marginStart="4dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <TextView
+                    android:id="@+id/poc_plot_code_name"
+                    android:layout_width="@dimen/_180sdp"
+                    android:layout_height="32dp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:text="Poc Plot Code/Name"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <TextView
+                    android:id="@+id/plot_village_code_name"
+                    android:layout_width="180dp"
+                    android:layout_height="32dp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="13dp"
+                    android:text="Plot Village Code/Name"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <TextView
+                    android:id="@+id/plotsr_no"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:text="Plot Sr No"
+                    android:textSize="13dp"
+
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <TextView
+                    android:id="@+id/grower_code_name_father"
+                    android:layout_width="320dp"
+                    android:layout_height="32dp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:padding="2dp"
+                    android:text="Grower Code/Name/Father"
+                    android:textSize="13dp"
+
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/black">
+                <RelativeLayout
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:layout_height="32dp">
+                    <ImageView
+                        android:id="@+id/view_all_plots_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/navigation"/>
+                    <TextView
+                        android:id="@+id/view_all_txt"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_margin=".5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="Details"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+                <RelativeLayout
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:layout_height="32dp">
+                    <ImageView
+                        android:id="@+id/navigation_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/navigation"/>
+                    <TextView
+                        android:id="@+id/navigation_txt"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_margin=".5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="Details"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+                <RelativeLayout
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_margin=".5dp"
+                    android:background="@color/white"
+                    android:layout_height="32dp">
+                    <ImageView
+                        android:id="@+id/plot_find_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/find"/>
+                    <TextView
+                        android:id="@+id/plot_find_txt"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_margin=".5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="Details"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

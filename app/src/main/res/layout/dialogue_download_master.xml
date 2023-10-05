@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/form_bg"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:text="Dowload Master"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/roboto_black"
+                    android:textColor="@color/colorAccent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    />
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_baseline_close_24"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_weight=".25"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="@dimen/dashboard_card_elevation"
+                    app:cardBackgroundColor="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/download_control_data_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:background="@color/white"
+                        android:gravity="left"
+                        android:layout_weight=".3" >
+
+                        <ImageView
+                            android:id="@+id/img_download_control"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_baseline_business_24" />
+
+                        <TextView
+                            android:id="@+id/download_control"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_download_control"
+                            android:gravity="center"
+                            android:textColor="@color/colorAccent"
+                            android:fontFamily="@font/roboto_black"
+                            android:textSize="20dp"
+                            android:text="Download Control Data" />
+
+                        <TextView
+                            android:id="@+id/download_control_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/download_control"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_black"
+                            android:textSize="9dp"
+                            android:text="0 Village" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_weight=".25"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="@dimen/dashboard_card_elevation"
+                    app:cardBackgroundColor="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/download_village_data_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:gravity="left"
+                        android:layout_weight=".3" >
+
+                        <ImageView
+                            android:id="@+id/img_download_village"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_baseline_card_travel_24" />
+
+                        <TextView
+                            android:id="@+id/download_village"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_download_village"
+                            android:gravity="center"
+                            android:textColor="@color/colorAccent"
+                            android:fontFamily="@font/roboto_black"
+                            android:textSize="20dp"
+                            android:text="Download Village Data" />
+
+                        <TextView
+                            android:id="@+id/download_village_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/download_village"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_black"
+                            android:textSize="12dp"
+                            android:text="0 Village" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/line1"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_weight=".25"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="@dimen/dashboard_card_elevation"
+                    app:cardBackgroundColor="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/download_master_data_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:gravity="left"
+                        android:layout_weight=".3" >
+
+                        <ImageView
+                            android:id="@+id/img_download_master"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_baseline_supervisor_account_24" />
+
+                        <TextView
+                            android:id="@+id/download_master"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_download_master"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto_black"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20dp"
+                            android:text="Download Master Data" />
+
+                        <TextView
+                            android:id="@+id/download_master_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/download_master"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto_black"
+                            android:textSize="12dp"
+                            android:text="0 master" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_weight=".25"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="@dimen/dashboard_card_elevation"
+                    app:cardBackgroundColor="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/download_farmer_data_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:background="@color/white"
+                        android:gravity="left"
+                        android:layout_weight=".3" >
+
+                        <ImageView
+                            android:id="@+id/img_download_farmer"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_baseline_person_pin_24" />
+
+                        <TextView
+                            android:id="@+id/download_farmer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_download_farmer"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="center"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20dp"
+                            android:text="Download Farmer Data" />
+
+                        <TextView
+                            android:id="@+id/download_farmer_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/download_farmer"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto_black"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:text="0 Farmer" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    namespace 'in.co.vibrant.bindalsugar'
+  //  namespace 'in.co.vibrant.canepotatodevelopmentwave'
+    compileSdk 34
+
+    defaultConfig {
+
+        applicationId "in.co.vibrant.bindalsugar"
+        minSdk 23
+        targetSdk 34
+        versionCode 3
+        versionName "1.0.3"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+        }
+
+        applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = ("cashwapas${getDate("")}_v${variant.versionCode}.apk").toLowerCase()
+            }
+        }
+    }
+
+    ndkVersion "21.4.7075529"
+/*
+    buildFeatures {
+        viewBinding true
+    }*/
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+}
+
+static def getDate(String s) {
+    def date = new Date()
+    def formattedDate = date.format('ddMMMyyyy_HH-mm')
+    return formattedDate
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'sun.bob:mcalendarview:1.0.0'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation files('libs/ksoap2-android-assembly-2.6.2-jar-with-dependencies.jar')
+    implementation files('libs/mantra.mfs100.jar')
+    implementation files('libs/AnalogicsVersa2IBTPrinterAPI.jar')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-iid:21.1.0'
+    implementation 'com.google.firebase:firebase-messaging:23.2.1'
+    implementation 'android.arch.work:work-runtime:1.0.1'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation files('libs/commons-logging-1.2.1.1.jar')
+    implementation 'com.github.ar-android:AndroidSvgLoader:1.0.2'
+    implementation 'com.github.vipulasri:timelineview:1.1.5'
+   // implementation 'com.google.maps.android:android-maps-utils:0.5+'
+    implementation 'com.google.maps.android:android-maps-utils:3.5.3'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.github.Zardozz:fixedheadertablelayout:0.0.0.2'
+    implementation 'com.github.Zardozz:fixedheadertablelayout:0.0.0.2'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    // implementation 'com.squareup.picasso:picasso:2.6.0-SNAPSHOT'
+
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    implementation 'com.github.juanlabrador:badgecounter:1.0.2@aar'
+
+    implementation 'com.github.gcacace:signature-pad:1.2.1'
+
+    implementation platform('com.google.firebase:firebase-bom:26.5.0')
+
+    implementation 'com.google.android.gms:play-services-vision:20.1.3'
+    implementation 'com.google.android.gms:play-services-vision-common:19.1.3'
+    implementation "com.google.android.gms:play-services-vision-face-contour-internal:16.1.0"
+    implementation 'com.google.android.gms:play-services-vision-image-label:18.1.1'
+
+    implementation 'com.google.firebase:firebase-ml-vision:'
+    implementation 'com.google.firebase:firebase-ml-vision-face-model:20.0.2'
+    implementation 'com.google.firebase:firebase-ml-model-interpreter:'
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.6'
+    implementation "com.airbnb.android:lottie:3.4.0"
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.jsibbold:zoomage:1.3.1'
+
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
+
+    implementation 'androidx.work:work-runtime:2.8.1'
+    implementation 'org.jdom:jdom2:2.0.6'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.facebook.shimmer:shimmer:0.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+
+
+}
+

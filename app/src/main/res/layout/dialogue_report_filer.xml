@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Search"
+                android:textColor="@color/colorAccent"
+                android:textSize="30dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_date"
+                android:layout_below="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/date"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:text="From Date"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/tv_date"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:layout_toRightOf="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_to_date"
+                android:layout_below="@+id/rl_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/to_date"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:text="To Date"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/tv_to_date"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:layout_toRightOf="@+id/to_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_village_code"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_to_date"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/village_code"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:text="Village Name"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/tv_village_code"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:layout_toRightOf="@+id/village_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_grower_name"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_village_code"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/grower_name"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:text="Grower Name"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/tv_grower_name"
+                    android:textSize="15dp"
+                    android:gravity="left"
+                    android:layout_toRightOf="@+id/grower_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_err_msg"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_grower_name"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/err_msg"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/holo_red_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_err_msg"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:paddingRight="10dp">
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.04"
+                    android:background="#4CAF50"
+                    android:layout_margin="12dp"
+                    android:text="Search"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!--<Button
+                    android:id="@+id/gross_weight_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.04"
+                    android:background="#F44336"
+                    android:layout_margin="12dp"
+                    android:text="Cancel"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />-->
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

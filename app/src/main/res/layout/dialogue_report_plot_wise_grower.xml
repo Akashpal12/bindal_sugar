@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:layout_height="wrap_content">
+
+            <!--<TextView
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:text="Download"
+                android:textSize="30dp"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                />-->
+
+            <RelativeLayout
+                android:id="@+id/rl_village"
+                android:layout_below="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="4dp"
+                    android:padding="@dimen/padding_10dp"
+                    android:background="@drawable/line_border_akash"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Select Vilage "
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"/>
+                    <Spinner
+                        android:id="@+id/tv_village"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_from_date"
+                android:layout_below="@+id/rl_village"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="4dp"
+                    android:paddingVertical="4dp"
+                    android:paddingHorizontal="@dimen/padding_10dp"
+                    android:background="@drawable/line_border_akash"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Enter Grower "
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"/>
+                    <AutoCompleteTextView
+                        android:id="@+id/tv_grower"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/LBL_GROWER_CODE"
+                        android:paddingVertical="10dp"
+                        android:background="@color/white"
+                        android:inputType="textCapWords"
+                        android:textColor="#000"
+                        android:textColorHint="@color/black"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_from_date"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4CAF50"
+                    android:text="@string/MENU_SEARCH"
+                    android:fontFamily="@font/roboto_black"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!--<Button
+                    android:id="@+id/gross_weight_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.04"
+                    android:background="#F44336"
+                    android:layout_margin="12dp"
+                    android:text="Cancel"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />-->
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

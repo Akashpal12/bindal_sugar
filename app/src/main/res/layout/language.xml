@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/form_bg"
+    tools:context=".view.admin.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_panel">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:baselineAligned="false"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardUseCompatPadding="true"
+                        android:onClick="setEnglish"
+                        android:clickable="true"
+                        app:cardElevation="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size"
+                            android:text="E" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:clickable="true"
+                        android:onClick="setHindi"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardElevation="10dp"
+                        app:cardUseCompatPadding="true">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:text="ह"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size"
+                            android:text="తె" />
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line2"
+                    android:layout_below="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:baselineAligned="false"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:onClick="setEnglish"
+                        android:clickable="true"
+                        android:text="English" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:onClick="setHindi"
+                        android:clickable="true"
+                        android:text="हिन्दी" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:text="తెలుగు" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line3"
+                    android:layout_below="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:baselineAligned="false"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size"
+                            android:text="বা" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size"
+                            android:text="म" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size"
+                            android:text="த" />
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line4"
+                    android:layout_below="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:baselineAligned="false"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:text="বাংলা" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:text="मराठी" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:text="தமிழ்" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line5"
+                    android:layout_below="@+id/line4"
+                    android:layout_width="match_parent"
+                    android:baselineAligned="false"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size"
+                            android:text="ಕ" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size"
+                            android:text="മ" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size"
+                            android:text="دو" />
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line6"
+                    android:layout_below="@+id/line5"
+                    android:layout_width="match_parent"
+                    android:baselineAligned="false"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:text="ಕನ್ನಡ" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:text="മലയാളം" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:text="اردو" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line7"
+                    android:layout_below="@+id/line6"
+                    android:layout_width="match_parent"
+                    android:baselineAligned="false"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size"
+                            android:text="ਪੰ" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size"
+                            android:text="ગુ" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/language_corner_radious"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="30dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/language_text_size"
+                            android:text="ଓ" />
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line8"
+                    android:layout_below="@+id/line7"
+                    android:layout_width="match_parent"
+                    android:baselineAligned="false"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:text="ਪੰਜਾਬੀ" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:text="ગુજરાતી" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:text="ଓଡ଼ିଆ" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

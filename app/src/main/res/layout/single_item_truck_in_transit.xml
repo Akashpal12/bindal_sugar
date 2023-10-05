@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    app:cardCornerRadius="5sp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:paddingBottom="5sp">
+
+        <RelativeLayout
+            android:id="@+id/rlLayoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="7sp">
+
+            <TextView
+                android:id="@+id/centre_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_textview"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/centre_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/centre_code"
+                android:paddingLeft="6dp"
+                android:text="Trip 1 "
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivgps"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_baseline_gps_fixed_24" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlLayoutHeader"
+            android:background="@color/white"
+            android:padding="5dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rLayoutLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/tvtruck_number"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Truck Number : "
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/truck_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvtruck_number"
+                    android:paddingLeft="3dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@+id/rLayoutLine1"
+                android:id="@+id/rLayoutLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/tvdriver_name"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Driver Name : "
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/driver_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvdriver_name"
+                    android:paddingLeft="3dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@+id/rLayoutLine2"
+                android:id="@+id/rLayoutLine3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/tvdriver_number"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Driver Number : "
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/driver_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvdriver_number"
+                    android:layout_toLeftOf="@+id/ivCall"
+                    android:paddingLeft="3dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/ivCall"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_call_white_24" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rLayoutLine4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutLine3"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/tvarrival"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Departurer Date : "
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/arrival"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvarrival"
+                    android:paddingLeft="3dp"
+                    android:text="01-02-2020 12:34:22"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rLayoutLine5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutLine4"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/tvwait_time"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Travel Time : "
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/wait_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvwait_time"
+                    android:paddingLeft="3dp"
+                    android:text="Center"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rLayoutLine6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rLayoutLine5"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/tvcane_weight"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Cane Weight : "
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/cane_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvcane_weight"
+                    android:paddingLeft="3dp"
+                    android:text="01-02-2020 12:34:22"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

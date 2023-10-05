@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.GrowerFinder">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:theme="@style/AppTheme.ToolbarFont"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent" >
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_above="@+id/navigationL"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_black"
+                        android:gravity="center"
+                        android:text="Grower Enquiry"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="30dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_id"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/heading"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="left"
+                            android:text="Village Code"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_1"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:layout_toRightOf="@+id/tv1"
+                            android:text=":"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_village_code"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="right"
+                            android:layout_toRightOf="@+id/tv_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_PLOT_NO"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_id"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/roboto_black"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:text="Village Name"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_2"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:layout_toRightOf="@+id/tv2"
+                            android:text=":"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_village_name"
+                            android:textSize="15dp"
+                            android:gravity="right"
+                            android:layout_toRightOf="@+id/tv_2"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_RYOT_CODE"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_PLOT_NO"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv3"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:text="Grower Code"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_3"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:layout_toRightOf="@+id/tv3"
+                            android:text=":"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_grower_code"
+                            android:textSize="15dp"
+                            android:gravity="right"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_toRightOf="@+id/tv_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_TOTAL_AREA"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_RYOT_CODE"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/roboto_black"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv4"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:text="Grower Name"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_4"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:layout_toRightOf="@+id/tv4"
+                            android:text=":"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_grower_name"
+                            android:textSize="15dp"
+                            android:gravity="right"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_toRightOf="@+id/tv_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_VARIETY_GROUP"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_TOTAL_AREA"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv5"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:fontFamily="@font/roboto_black"
+                            android:text="Grower Mobile"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_5"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_toRightOf="@+id/tv5"
+                            android:text=":"
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_grower_mobile"
+                            android:textSize="15dp"
+                            android:gravity="right"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_toRightOf="@+id/tv_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_VARIETY_CODE"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_VARIETY_GROUP"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv6"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:text="Centre Name"
+                            android:layout_width="130dp"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_6"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:layout_toRightOf="@+id/tv6"
+                            android:text=":"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_centre_name"
+                            android:textSize="15dp"
+                            android:gravity="right"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_toRightOf="@+id/tv_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_UNIT_CODE"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_VARIETY_CODE"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv7"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:fontFamily="@font/roboto_black"
+                            android:text="Society Name"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/tv_7"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:layout_toRightOf="@+id/tv7"
+                            android:text=":"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_society_name"
+                            android:textSize="15dp"
+                            android:gravity="right"                            android:fontFamily="@font/roboto_black"
+                            android:layout_toRightOf="@+id/tv_7"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_SEASON_CNTRL"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_UNIT_CODE"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv8"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:text="Total Land"
+                            android:layout_width="130dp"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_8"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:layout_toRightOf="@+id/tv8"
+                            android:text=":"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_total_land"
+                            android:textSize="15dp"
+                            android:gravity="right"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_toRightOf="@+id/tv_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_VILLAGE_CODE"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_SEASON_CNTRL"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv9"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:text="Basic Quota"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_9"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:layout_toRightOf="@+id/tv9"
+                            android:text=":"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_basic_quota"
+                            android:textSize="15dp"
+                            android:gravity="right"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_toRightOf="@+id/tv_9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_EGR"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_VILLAGE_CODE"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv10"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:fontFamily="@font/roboto_black"
+                            android:text="Mode"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_10"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:layout_toRightOf="@+id/tv10"
+                            android:text=":"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_mode"
+                            android:textSize="15dp"
+                            android:gravity="right"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_toRightOf="@+id/tv_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_avg_upaj"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_EGR"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv11"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:fontFamily="@font/roboto_black"
+                            android:text="Avg Upaj"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_11"
+                            android:textSize="15dp"
+                            android:gravity="left"
+                            android:layout_toRightOf="@+id/tv11"
+                            android:text=":"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_avg_upaj"
+                            android:textSize="15dp"
+                            android:gravity="right"
+                            android:fontFamily="@font/roboto_black"
+                            android:layout_toRightOf="@+id/tv_11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/navigationL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.04"
+                android:background="#4CAF50"
+                android:text="BACK"
+                android:visibility="gone"
+                android:fontFamily="@font/roboto_black"
+                android:clickable="true"
+                android:onClick="backToDashboard"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+</RelativeLayout>
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_add_black_24dp" />-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

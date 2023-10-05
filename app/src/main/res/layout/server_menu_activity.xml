@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/AppTheme.ToolbarFont" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/form_bg"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".ui.MainActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_image_with_alpha"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:alignContent="flex_start"
+                    app:alignItems="flex_start"
+                    app:flexWrap="wrap"
+                    app:justifyContent="flex_start">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lightgray"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_baseline_arrow_circle_down_24"/>
+                            <Button
+                                android:id="@+id/btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:background="@color/lightgray"
+                                android:text="@string/SERVERDATA_MENU_PENDING_INDENTING_ON_SERVER"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/lightgray"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_baseline_arrow_circle_down_24"/>
+                            <Button
+                                android:id="@+id/btn1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/lightgray"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/SERVERDATA_MENU_fAILED_INDENTING_ON_SERVER"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/lightgray"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_baseline_arrow_circle_down_24"/>
+
+                            <Button
+                                android:id="@+id/btn2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/lightgray"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/SERVERDATA_MENU_UPLOAD_INDENTING_ON_SERVER"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lightgray"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_baseline_arrow_circle_down_24"/>
+
+
+                            <Button
+                                android:id="@+id/btn6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/SERVERDATA_MENU_PENDING_PLANTING_ON_SERVER"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lightgray"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_baseline_arrow_circle_down_24"/>
+
+                            <Button
+                                android:id="@+id/btn7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/lightgray"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/SERVERDATA_MENU_FAILED_PLANTING_ON_SERVER"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                        <!--      <LinearLayout
+                                  android:layout_width="120dp"
+                                  android:layout_height="120dp"
+                                  android:layout_marginLeft="10dp"
+                                  android:background="@color/lightgray"
+                                  android:orientation="vertical">
+                                  <ImageView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="35dp"
+                                      android:src="@drawable/ic_baseline_arrow_circle_down_24"/>
+
+                                  <Button
+                                      android:id="@+id/btn8"
+                                      android:layout_width="120dp"
+                                      android:layout_height="wrap_content"
+                                      android:layout_marginLeft="10dp"
+                                      android:layout_marginTop="5dp"
+                                      android:background="@color/lightgray"
+                                      android:fontFamily="@font/roboto_black"
+                                      android:gravity="center"
+                                      android:text="@string/SERVERDATA_MENU_UPLOAD_PLANTING_ON_SERVER"
+                                      android:textColor="@color/colorAccent"
+                                      android:textSize="12dp" />
+
+                              </LinearLayout>-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/lightgray"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_baseline_arrow_circle_down_24"/>
+
+
+                            <Button
+                                android:id="@+id/btn8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/SERVERDATA_MENU_CANE_SERVER_DATA"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:baselineAligned="false"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lightgray"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_baseline_arrow_circle_down_24"/>
+
+
+                            <Button
+                                android:id="@+id/btn9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/lightgray"
+                                android:fontFamily="@font/roboto_black"
+                                android:gravity="center"
+                                android:text="@string/SERVERDATA_MENU_CANE_SERVER_DATA"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/btn3"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:background="@color/form_bg"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="center"
+                            android:text="Backup Data"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12dp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn4"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/form_bg"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="center"
+                            android:text="Restore Data"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12dp"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:id="@+id/btn5"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:background="@color/lightgray"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="center"
+                            android:text="Download Indenting"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </com.google.android.flexbox.FlexboxLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.supervisor.StaffVehicleCollection">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/AppTheme.ToolbarFont" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rec_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/background_image_with_alpha">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <RelativeLayout
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_village_code"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/canearea_bg"
+                        android:gravity="left"
+                        android:textColor="@color/colorAccent">
+
+                        <EditText
+                            android:id="@+id/input_village_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:background="#00000000"
+                            android:fontFamily="@font/calibri"
+                            android:gravity="left"
+                            android:hint="@string/LBL_VILLAGE_CODE"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:padding="5dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#000"
+                            android:textSize="15dp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_village_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/input_layout_village_code"
+                        android:background="@drawable/canearea_bg"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/colorAccent">
+
+                        <EditText
+                            android:id="@+id/input_village_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:background="#00000000"
+
+                            android:fontFamily="@font/calibri"
+                            android:gravity="left"
+                            android:hint="@string/MENU_VILL_NAME"
+                            android:inputType="none"
+                            android:padding="5dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#000"
+
+                            android:textSize="15dp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line1"
+                    android:layout_marginTop="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_grower_code"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/canearea_bg"
+                        android:gravity="left"
+                        android:textColor="@color/lightgray">
+
+                        <EditText
+                            android:id="@+id/input_grower_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:background="#00000000"
+                            android:fontFamily="@font/calibri"
+                            android:gravity="left"
+                            android:hint="@string/LBL_GROWER_CODE"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:padding="5dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#000"
+                            android:textSize="15dp" />
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_grower_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/input_layout_grower_code"
+                        android:background="@drawable/canearea_bg"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/input_grower_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:background="#00000000"
+
+                            android:fontFamily="@font/calibri"
+                            android:gravity="left"
+                            android:hint="@string/MENU_GROWER_NAME"
+
+                            android:padding="5dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#000"
+
+                            android:textSize="15dp" />
+
+                        <!--  <EditText
+                              android:id="@+id/input_village_name"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:editable="false"
+                              android:fontFamily="@font/roboto_black"
+                              android:hint="Village Name"
+                              android:inputType="none"
+                              android:textIsSelectable="false"
+                              android:textSize="12dp" />
+  -->
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_grower_father"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/line2"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/canearea_bg"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/input_grower_father"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:background="#00000000"
+
+                        android:fontFamily="@font/calibri"
+                        android:gravity="left"
+                        android:hint="@string/LBL_GROWER_FATHER"
+                        android:inputType="none"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#000"
+
+                        android:textSize="15dp" />
+
+                    <!--  <EditText
+                          android:id="@+id/input_village_name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:editable="false"
+                          android:fontFamily="@font/roboto_black"
+                          android:hint="Village Name"
+                          android:inputType="none"
+                          android:textIsSelectable="false"
+                          android:textSize="12dp" />
+-->
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- <RelativeLayout
+                     android:id="@+id/rl_category"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/rl_aadhar_number"
+                     android:layout_marginTop="10dp"
+                     android:background="@drawable/canearea_bg">
+
+                     <TextView
+                         android:id="@+id/t_category"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="10dp"
+                         android:fontFamily="@font/calibri"
+                         android:text="@string/MENU_ADD_FAMILY_MEMBER"
+                         android:textSize="13dp" />
+
+
+                     <Spinner
+                         android:id="@+id/relation"
+                         android:layout_width="match_parent"
+                         android:layout_height="35dp"
+                         android:layout_below="@+id/t_category"
+                         android:layout_marginLeft="10dp"
+                         android:fontFamily="@font/calibri"
+                         android:hint="Select CaneType "
+                         android:inputType="number"
+                         android:textColor="#000"
+                         android:textColorHint="#949494"
+                         android:textSize="16dp" />
+
+                 </RelativeLayout>
+
+
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="5dp"
+                     android:orientation="vertical"
+                     android:padding="5dp">
+
+                     <RelativeLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="10dp">
+
+
+                         <Button
+                             android:id="@+id/btn_add"
+                             android:layout_width="70dp"
+                             android:layout_height="30dp"
+                             android:clickable="true"
+                             android:onClick="addActivity"
+                             android:layout_alignParentEnd="true"
+                             android:layout_alignParentRight="true"
+                             android:background="@drawable/rounded_button_green"
+                             android:text="@string/add"
+                             android:textAllCaps="false"
+                             android:textColor="@color/white"
+                             android:textSize="12dp" />
+                     </RelativeLayout>
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:id="@+id/llLayoutr"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_marginTop="5dp"
+                     android:gravity="center"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/tvNoRecordAdded"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:gravity="center"
+                         android:text="No data added"
+                         android:textColor="@color/light_gray_text"
+                         android:textSize="10dp"
+                         android:visibility="gone" />
+
+                     <ScrollView
+                         android:id="@+id/vehicle_list"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent">
+
+                         <LinearLayout
+                             android:id="@+id/layout_booking"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:gravity="center_horizontal"
+                             android:orientation="vertical">
+
+
+                             <androidx.recyclerview.widget.RecyclerView
+                                 android:id="@+id/recycler_view"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content" />
+
+
+
+                         </LinearLayout>
+                     </ScrollView>
+
+
+
+                     <Button
+                         android:id="@+id/btn_save_add_form"
+                         android:layout_width="match_parent"
+                         android:layout_height="35dp"
+                         android:layout_below="@+id/iLayoutThumb"
+                         android:layout_marginTop="20dp"
+                         android:layout_marginBottom="20dp"
+                         android:layout_marginRight="50dp"
+                         android:layout_marginLeft="50dp"
+                         android:background="@drawable/rounded_button_green"
+                         android:visibility="gone"
+                         android:text="Save"
+                         android:textAllCaps="false"
+                         android:textColor="@color/white"
+                         android:textSize="12dp" />
+
+
+
+                 </LinearLayout>
+ -->
+
+
+                <LinearLayout
+                    android:id="@+id/ll_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iLayoutThumb"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_Auto1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/vehicle_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_below="@+id/t_category"
+                                android:layout_marginLeft="10dp"
+                                android:inputType="number"
+                                android:textColor="#000"
+                                android:textColorHint="#949494"
+                                android:textSize="16dp" />
+
+
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/input_layout_village_code1"
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/canearea_bg"
+                                android:gravity="left"
+                                android:textColor="@color/colorAccent">
+
+                                <EditText
+                                    android:id="@+id/input_village_code1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+                                    android:fontFamily="@font/calibri"
+                                    android:gravity="left"
+                                    android:hint="@string/MENU_PARENT_CODE"
+                                    android:inputType="number"
+                                    android:maxLength="6"
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorAccent"
+                                    android:textColorHint="#000"
+                                    android:textSize="15dp" />
+
+                                <!-- <EditText
+                                     android:id="@+id/input_village_code"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:fontFamily="@font/roboto_black"
+                                     android:hint="Village Code"
+                                     android:inputType="number"
+                                     android:textColor="@color/colorAccent"
+                                     android:textSize="12dp"/>-->
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/input_layout_village_name1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/input_layout_village_code1"
+                                android:background="@drawable/canearea_bg"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorAccent">
+
+                                <EditText
+                                    android:id="@+id/input_village_name1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+
+                                    android:fontFamily="@font/calibri"
+                                    android:gravity="left"
+                                    android:hint="@string/MENU_PARENT_VILL_NAME"
+                                    android:inputType="none"
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorAccent"
+                                    android:textColorHint="#000"
+
+                                    android:textSize="15dp" />
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line1"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/input_layout_grower_code1"
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/canearea_bg"
+                                android:gravity="left"
+                                android:textColor="@color/lightgray">
+
+                                <EditText
+                                    android:id="@+id/input_grower_code1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+                                    android:fontFamily="@font/calibri"
+                                    android:gravity="left"
+                                    android:hint="@string/MENU_PARENT_GROW_CODE"
+                                    android:inputType="number"
+                                    android:maxLength="6"
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorAccent"
+                                    android:textColorHint="#000"
+                                    android:textSize="15dp" />
+
+                                <!-- <EditText
+                                     android:id="@+id/input_village_code"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:fontFamily="@font/roboto_black"
+                                     android:hint="Village Code"
+                                     android:inputType="number"
+                                     android:textColor="@color/colorAccent"
+                                     android:textSize="12dp"/>-->
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/input_layout_grower_name1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/input_layout_grower_code1"
+                                android:background="@drawable/canearea_bg"
+                                android:gravity="center_vertical">
+
+                                <EditText
+                                    android:id="@+id/input_grower_name1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:background="#00000000"
+
+                                    android:fontFamily="@font/calibri"
+                                    android:gravity="left"
+                                    android:hint="@string/MENU_PARENT_GROW_FNAME"
+
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorAccent"
+                                    android:textColorHint="#000"
+
+                                    android:textSize="15dp" />
+
+                                <!--  <EditText
+                                      android:id="@+id/input_village_name"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:editable="false"
+                                      android:fontFamily="@font/roboto_black"
+                                      android:hint="Village Name"
+                                      android:inputType="none"
+                                      android:textIsSelectable="false"
+                                      android:textSize="12dp" />
+          -->
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </RelativeLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_grower_father1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/line2"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/canearea_bg"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/input_grower_father1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:background="#00000000"
+
+                                android:fontFamily="@font/calibri"
+                                android:gravity="left"
+                                android:hint="@string/MENU_PARENT_GROW_FNAME"
+                                android:inputType="none"
+                                android:padding="5dp"
+                                android:textColor="@color/colorAccent"
+                                android:textColorHint="#000"
+
+                                android:textSize="15dp" />
+
+                            <!--  <EditText
+                                  android:id="@+id/input_village_name"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:editable="false"
+                                  android:fontFamily="@font/roboto_black"
+                                  android:hint="Village Name"
+                                  android:inputType="none"
+                                  android:textIsSelectable="false"
+                                  android:textSize="12dp" />
+        -->
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_vehicle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/line2"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/canearea_bg"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/input_vehicle_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:background="#00000000"
+                            android:fontFamily="@font/calibri"
+                            android:gravity="left"
+                            android:hint="@string/MENU_VEHICLE_NUMBER"
+                            android:inputType="none"
+                            android:padding="5dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#000"
+                            android:textSize="15dp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_capacity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/line2"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/canearea_bg"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/input_capacity"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:background="#00000000"
+                            android:fontFamily="@font/calibri"
+                            android:gravity="left"
+                            android:hint="Capacity"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:textColor="@color/colorAccent"
+                            android:textColorHint="#000"
+                            android:textSize="15dp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+
+                            <Button
+                                android:id="@+id/btn_add"
+                                android:layout_width="70dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/rounded_button_green"
+                                android:text="@string/add"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="12dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llLayoutr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvNoRecordAdded"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="No data added"
+                            android:textColor="@color/light_gray_text"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+                        <ScrollView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/layout_booking"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recycler_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </ScrollView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@color/dark_green"
+                    android:clickable="true"
+                    android:fontFamily="@font/calibri"
+                    android:gravity="center"
+                    android:onClick="saveData"
+                    android:padding="10dp"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

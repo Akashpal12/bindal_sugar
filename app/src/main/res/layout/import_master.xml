@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/form_bg"
+    tools:context=".view.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/AppTheme.ToolbarFont" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".view.MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_image_with_alpha"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="0dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:alignContent="flex_start"
+                        app:alignItems="flex_start"
+                        app:flexWrap="wrap"
+                        app:justifyContent="flex_start">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cv_rpthcr"
+                                    android:layout_width="0dp"
+                                    android:layout_height="120dp"
+                                    android:layout_gravity="left|top"
+                                    android:layout_weight=".3"
+                                    android:clickable="true"
+                                    android:onClick="OpendownloadSurveyMaster"
+                                    app:cardBackgroundColor="@color/lightgray"
+                                    app:cardCornerRadius="12dp"
+                                    app:cardElevation="5dp"
+                                    app:cardUseCompatPadding="true">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="4dp"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="45dp"
+                                            android:src="@drawable/ic_baseline_arrow_circle_down_24" />
+
+                                        <TextView
+                                            android:id="@+id/txt_rpthcr"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="@string/MENU_SURVEY_MAster"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cv_rptadaor"
+                                    android:layout_width="0dp"
+                                    android:layout_height="120dp"
+                                    android:layout_gravity="left|top"
+                                    android:layout_weight=".3"
+                                    android:clickable="true"
+                                    android:onClick="openDropDownMasterData"
+                                    app:cardBackgroundColor="@color/lightgray"
+                                    app:cardCornerRadius="12dp"
+                                    app:cardElevation="5dp"
+                                    app:cardUseCompatPadding="true">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="4dp"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="45dp"
+                                            android:src="@drawable/attendance" />
+
+                                        <TextView
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="@string/MENU_CANE_DEVELOPMENT_MASTER"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cv_weieght"
+                                    android:layout_width="0dp"
+                                    android:layout_height="120dp"
+                                    android:layout_gravity="left|top"
+                                    android:layout_weight=".3"
+                                    android:clickable="true"
+                                    android:onClick="downloadResetDatabase"
+                                    app:cardBackgroundColor="@color/lightgray"
+                                    app:cardCornerRadius="12dp"
+                                    app:cardElevation="5dp"
+
+                                    app:cardUseCompatPadding="true">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="4dp"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="45dp"
+                                            android:src="@drawable/report" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="@string/MENU_RESET_DATABASE"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cv_agri"
+                                    android:layout_width="0dp"
+                                    android:layout_height="120dp"
+                                    android:layout_gravity="left|top"
+                                    android:layout_weight=".3"
+                                    android:clickable="true"
+                                    android:onClick="downloadAgrimaster"
+                                    app:cardBackgroundColor="@color/lightgray"
+                                    app:cardCornerRadius="12dp"
+                                    app:cardElevation="5dp"
+                                    app:cardUseCompatPadding="true">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="4dp"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="45dp"
+                                            android:src="@drawable/agri" />
+
+                                        <TextView
+                                            android:id="@+id/txt_agri"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="Download Agri Master"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="12dp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+
+                            <!--         <LinearLayout
+                                         android:id="@+id/line"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="wrap_content"
+                                         android:orientation="horizontal"
+                                         android:padding="5dp"
+                                         android:visibility="visible">
+
+                                         <androidx.cardview.widget.CardView
+                                             android:layout_width="0dp"
+                                             android:layout_height="120dp"
+                                             android:layout_weight=".3"
+                                             android:clickable="true"
+                                             android:gravity="left"
+                                             android:onClick="downloadAgrimaster"
+                                             app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                                             app:cardElevation="@dimen/dashboard_card_elevation"
+                                             app:cardUseCompatPadding="true">
+
+
+
+                                                 <ImageView
+                                                     android:id="@+id/agri"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="60dp"
+                                                     android:src="@drawable/ic_baseline_arrow_circle_down_24" />
+
+                                                 <TextView
+                                                     android:id="@+id/download_agri"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent"
+                                                     android:layout_below="@+id/agri"
+                                                     android:fontFamily="@font/roboto_black"
+                                                     android:gravity="center"
+                                                     android:text="Download Agri Master"
+                                                     android:textColor="@color/colorAccent"
+                                                     android:textSize="15dp" />
+
+
+
+
+                                         </androidx.cardview.widget.CardView>
+
+                                         <androidx.cardview.widget.CardView
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:layout_weight=".25"
+                                             android:visibility="gone"
+                                             app:cardBackgroundColor="@color/white"
+                                             app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                                             app:cardElevation="@dimen/dashboard_card_elevation"
+                                             app:cardUseCompatPadding="true">
+
+                                             <RelativeLayout
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="120dp"
+                                                 android:layout_margin="5dp"
+                                                 android:layout_weight=".3"
+                                                 android:background="@color/white"
+                                                 android:clickable="true"
+                                                 android:gravity="left"
+                                                 android:onClick="downloadCaneSurveyData"
+                                                 android:orientation="horizontal">
+
+                                                 <ImageView
+                                                     android:id="@+id/img_download_survey"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="50dp"
+                                                     android:src="@drawable/downloadsurvey" />
+
+                                                 <TextView
+                                                     android:id="@+id/download_survey"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="wrap_content"
+                                                     android:layout_below="@+id/img_download_survey"
+                                                     android:fontFamily="@font/roboto_black"
+                                                     android:gravity="center"
+                                                     android:text="Cane Download Master"
+                                                     android:textColor="@color/colorAccent"
+                                                     android:textSize="12dp" />
+
+                                                 <TextView
+                                                     android:id="@+id/download_survey_data"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="wrap_content"
+                                                     android:layout_below="@+id/download_survey"
+                                                     android:fontFamily="@font/roboto_black"
+                                                     android:gravity="center"
+                                                     android:text="0 Master Cane Development"
+                                                     android:textColor="@color/colorAccent"
+                                                     android:textSize="10dp"
+                                                     android:visibility="gone" />
+
+                                             </RelativeLayout>
+
+                                         </androidx.cardview.widget.CardView>
+
+                                         <androidx.cardview.widget.CardView
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:layout_weight=".25"
+                                             android:visibility="gone"
+                                             app:cardBackgroundColor="@color/white"
+                                             app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                                             app:cardElevation="@dimen/dashboard_card_elevation"
+                                             app:cardUseCompatPadding="true">
+
+                                             <RelativeLayout
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="120dp"
+                                                 android:layout_margin="5dp"
+                                                 android:layout_weight=".3"
+                                                 android:background="@color/white"
+                                                 android:clickable="true"
+                                                 android:gravity="left"
+                                                 android:onClick="downloadResetDatabase"
+                                                 android:orientation="horizontal">
+
+                                                 <ImageView
+                                                     android:id="@+id/img_reset_database"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="50dp"
+                                                     android:src="@drawable/resetdatabase" />
+
+                                                 <TextView
+                                                     android:id="@+id/reset_database"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="wrap_content"
+                                                     android:layout_below="@+id/img_reset_database"
+                                                     android:fontFamily="@font/roboto_black"
+                                                     android:gravity="center"
+                                                     android:text="Reset Database"
+                                                     android:textColor="@color/colorAccent"
+                                                     android:textSize="12dp" />
+
+                                                 <TextView
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="wrap_content"
+                                                     android:layout_below="@+id/reset_database"
+                                                     android:fontFamily="@font/roboto_black"
+                                                     android:gravity="center"
+                                                     android:textColor="@color/colorAccent"
+                                                     android:textSize="10dp" />
+
+                                             </RelativeLayout>
+
+                                         </androidx.cardview.widget.CardView>
+
+                                         <androidx.cardview.widget.CardView
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:layout_weight=".25"
+                                             android:visibility="visible"
+                                             app:cardBackgroundColor="@color/white"
+                                             app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                                             app:cardElevation="@dimen/dashboard_card_elevation"
+                                             app:cardUseCompatPadding="true">
+
+                                             <RelativeLayout
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="120dp"
+                                                 android:layout_margin="5dp"
+                                                 android:layout_weight=".3"
+                                                 android:background="@color/white"
+                                                 android:clickable="true"
+                                                 android:gravity="left"
+                                                 android:onClick="downloadPlantingData"
+                                                 android:orientation="horizontal"
+                                                 android:visibility="gone">
+
+                                                 <ImageView
+                                                     android:id="@+id/img_download_planting"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="50dp"
+                                                     android:src="@drawable/dataserver" />
+
+                                                 <TextView
+                                                     android:id="@+id/download_planting"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="wrap_content"
+                                                     android:layout_below="@+id/img_download_planting"
+                                                     android:fontFamily="@font/roboto_black"
+                                                     android:gravity="center"
+                                                     android:text="Download Planting Data"
+                                                     android:textColor="@color/colorAccent"
+                                                     android:textSize="12dp" />
+
+                                                 <TextView
+                                                     android:id="@+id/download_planting_data"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="wrap_content"
+                                                     android:layout_below="@+id/download_planting"
+                                                     android:fontFamily="@font/roboto_black"
+                                                     android:gravity="center"
+                                                     android:text="0 Master Cane Development"
+                                                     android:textColor="@color/colorAccent"
+                                                     android:textSize="10dp" />
+
+                                             </RelativeLayout>
+
+                                         </androidx.cardview.widget.CardView>
+
+                                     </LinearLayout>
+             -->
+
+                            <LinearLayout
+                                android:id="@+id/line3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="5dp"
+                                android:visibility="visible">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".25"
+                                    android:visibility="gone"
+                                    app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                                    app:cardElevation="@dimen/dashboard_card_elevation"
+                                    app:cardUseCompatPadding="true">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight=".3"
+                                        android:background="@color/white"
+                                        android:clickable="true"
+                                        android:gravity="left"
+                                        android:onClick="ddownloadDropDownMasterData"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/img_download_dropdown"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:src="@drawable/ic_baseline_arrow_circle_down_24" />
+
+                                        <TextView
+                                            android:id="@+id/download_dropdown"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/img_download_dropdown"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="Survey Download  Master"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="15dp" />
+
+                                        <TextView
+                                            android:id="@+id/download_dropdown_data"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/download_dropdown"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="0 Master Cane Development"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="10dp"
+                                            android:visibility="gone" />
+
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".25"
+                                    android:visibility="gone"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                                    app:cardElevation="@dimen/dashboard_card_elevation"
+                                    app:cardUseCompatPadding="true">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight=".3"
+                                        android:background="@color/white"
+                                        android:clickable="true"
+                                        android:gravity="left"
+                                        android:onClick="downloadCaneSurveyData"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/img_download_survey"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:src="@drawable/downloadsurvey" />
+
+                                        <TextView
+                                            android:id="@+id/download_survey"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/img_download_survey"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="Cane Download Master"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="12dp" />
+
+                                        <TextView
+                                            android:id="@+id/download_survey_data"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/download_survey"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="0 Master Cane Development"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="10dp"
+                                            android:visibility="gone" />
+
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".25"
+                                    android:visibility="gone"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                                    app:cardElevation="@dimen/dashboard_card_elevation"
+                                    app:cardUseCompatPadding="true">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight=".3"
+                                        android:background="@color/white"
+                                        android:clickable="true"
+                                        android:gravity="left"
+                                        android:onClick="downloadResetDatabase"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/img_reset_database"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:src="@drawable/resetdatabase" />
+
+                                        <TextView
+                                            android:id="@+id/reset_database"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/img_reset_database"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="Reset Database"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="12dp" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/reset_database"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="10dp" />
+
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".25"
+                                    android:visibility="visible"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                                    app:cardElevation="@dimen/dashboard_card_elevation"
+                                    app:cardUseCompatPadding="true">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight=".3"
+                                        android:background="@color/white"
+                                        android:clickable="true"
+                                        android:gravity="left"
+                                        android:onClick="downloadPlantingData"
+                                        android:orientation="horizontal"
+                                        android:visibility="gone">
+
+                                        <ImageView
+                                            android:id="@+id/img_download_planting"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:src="@drawable/dataserver" />
+
+                                        <TextView
+                                            android:id="@+id/download_planting"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/img_download_planting"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="Download Planting Data"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="12dp" />
+
+                                        <TextView
+                                            android:id="@+id/download_planting_data"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/download_planting"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="0 Master Cane Development"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="10dp" />
+
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/line4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/line3"
+                                android:orientation="horizontal">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".25"
+                                    android:visibility="gone"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardCornerRadius="@dimen/dashboard_corner_radious"
+                                    app:cardElevation="@dimen/dashboard_card_elevation"
+                                    app:cardUseCompatPadding="true">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="120dp"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight=".3"
+                                        android:background="@color/white"
+                                        android:clickable="true"
+                                        android:gravity="left"
+                                        android:onClick="OpendownloadSurveyMaster"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/img_download_survey_master"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:src="@drawable/surveymaster" />
+
+                                        <TextView
+                                            android:id="@+id/download_survey_master"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/img_download_survey_master"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text="Download Survey Master"
+                                            android:textColor="@color/colorAccent"
+                                            android:textSize="12dp"
+                                            android:visibility="visible" />
+
+                                        <TextView
+                                            android:id="@+id/img_download_survey_master_data"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/download_survey_master"
+                                            android:fontFamily="@font/roboto_black"
+                                            android:gravity="center"
+                                            android:text=""
+                                            android:textColor="@color/black"
+                                            android:textSize="10dp" />
+
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/line5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/line4"
+                                android:orientation="horizontal">
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.flexbox.FlexboxLayout>
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

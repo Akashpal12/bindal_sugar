@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6A89A6</color>
+    <color name="colorPrimaryDark">#AE292C</color>
+    <color name="colorAccent">#2D135D</color>
+    <!--<color name="colorPrimary">#5FF436</color>
+    <color name="colorPrimaryDark">#1D8C07</color>
+    <color name="colorAccent">#138F95</color>-->
+
+
+    <color name="darkYellow">#FFC107</color>
+    <color name="light_blue">#00BCD4</color>
+
+    <color name="form_bg">#F5F4E9</color>
+    <color name="black">#000000</color>
+
+    <color name="gray">#CECBCA</color>
+    <color name="coordinate">#CECBCA</color>
+    <color name="test">#88FF5722</color>
+    <color name="lightgray">#EAEEF1</color>
+    <color name="grayy">#D3D1D1</color>
+    <color name="offwhite">#88E4E1E0</color>
+    <color name="skyblue">#62C4F1</color>
+    <color name="pink">#E15E8A</color>
+    <color name="yellow">#C1B22F</color>
+    <color name="orange">#F66C40</color>
+    <color name="blue">#DDDDD7</color>
+    <color name="red">#D6655D</color>
+    <color name="bluee">#5D6ECC</color>
+    <color name="darkpink">#B9C16F</color>
+    <color name="greenm">#60CD64</color>
+
+
+
+    <color name="dark_gray">#424242</color>
+    <color name="light_gray">#dbdbdb</color>
+    <color name="light_gray_text">#6e6e6e</color>
+    <color name="green">#7dc242</color>
+    <color name="dark_green">#FF4D8B17</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dark_red">#FFA00505</color>
+    <color name="dark_blue">#FF1932BD</color>
+    <color name="signature_bg">#546EC423</color>
+    <color name="off_white">#F3EDED</color>
+
+    <color name="Total">#27006064</color>
+    <color name="Traget">#2733691E</color>
+    <color name="Variance">#25880E4F</color>
+    <color name="Default">#0ABF360C</color>
+
+</resources>
